@@ -31,7 +31,7 @@ const peopleList = [
   { name: "Miska", number: "041239123", hometown: "Helsinki" },
   { name: "Daniel", number: "056239123", hometown: "Tuusula" }]
 
-const headers = ["nimi", "numero", "kotikunta"]
+const headers = ["Nimi", "Numero", "Kotikunta"]
 
 stories.add("Tabledata", () => {
 
