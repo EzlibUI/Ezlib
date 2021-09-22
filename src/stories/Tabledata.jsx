@@ -1,13 +1,13 @@
 import React from "react";
 import './tabledata.css';
 
-const Tabledata = ({ headers, content }) => {
+const Tabledata = ({ headers, content, handleSort }) => {
 
   return (
     <table>
       <tr> {/*Headerin data */}
         {headers.map(header => {
-          return <th>{header}</th>
+          return <th onClick={handleSort} name={header.property}>{header.header}</th>
         })}
       </tr>
       { // Luodaan jokaiselle datan objektille rivi
