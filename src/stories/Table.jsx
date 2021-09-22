@@ -6,16 +6,21 @@ const Table = ({ parentData, parentHeaders }) => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([])
   const [filter, setFilter] = useState("");
+  const [sortBy, setSortBy] = useState([]);
+  const [sortedData, setSortedData] = useState([]);
 
   useEffect(() => {
     setData(parentData);
     setFilteredData(parentData);
+    setSortedData(parentData)
+    setSortBy(parentHeaders[0].property);
   }, [])
 
   const handleFilter = (e) => {
     setFilter(e.target.value);
+    console.log(e.target.value, typeof (e.target.value))
     //käsitellä alkuperäistä dataa
-    const result = data.filter(data => {
+    const result = sortedData.filter(data => {
       //haetaan objektin avaimet ja niiden arvot
       const personData = Object.keys(data).map(key => {
         return data[key];
@@ -24,15 +29,44 @@ const Table = ({ parentData, parentHeaders }) => {
       return newString.includes(e.target.value) //tarkastetaan jos merkkijonoon sisältyy filteri
     })
     //filteröi datan filterin perusteella
+
     setFilteredData(result)
     //palauttaa datan filteredDatan stateen
   }
+
+  const handleSort = (e) => {
+    const property = e.target.getAttribute("name");
+    console.log(property);
+
+    const sortedlist = [...filteredData].sort((a, b) => {
+      return ("" + a[property]).localeCompare(b[property])
+    })
+    setSortedData(sortedlist)
+    setFilteredData(sortedlist)
+  }
+  /*
+  const makeSortedList = () => {
+    const listOfValues = data.map(obj => {
+      return obj.hometown
+    })
+    const sortedList = listOfValues.sort()
+  }
+  makeSortedList()
+  //sortataan nimilista
+
+  //tehdään uusi lista, missä 
+
+  console.log(sortedlist)
+  setFilter()
+  setSortedData(sortedlist)
+}
+*/
 
   return (
     <div>
       <label For="filter">Filter by name: </label>
       <input type="text" onChange={handleFilter} name="filter" value={filter}></input>
-      <Tabledata headers={parentHeaders} content={filteredData} />
+      <Tabledata headers={parentHeaders} content={filteredData} handleSort={handleSort} />
     </div>
   )
 }
