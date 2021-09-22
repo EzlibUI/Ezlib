@@ -5,19 +5,33 @@ import Table from "./Table";
 const stories = storiesOf("Table", module);
 
 const peopleList = [
-  { name: "bliver", number: "081239123", hometown: "Helsinki" },
-  { name: "aoonas", number: "071239123", hometown: "Kerava" },
-  { name: "ciika", number: "054123912", hometown: "Kerava" },
-  { name: "diska", number: "041239123", hometown: "Helsinki" },
-  { name: "eaniel", number: "056239123", hometown: "Tuusula" },
-  { name: "fliver", number: "061239123", hometown: "Helsinki" },
-  { name: "gliver", number: "021239123", hometown: "Helsinki" }]
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" }]
 
-const headers = [
-  { header: "Nimi", property: "name" },
-  { header: "Numero", property: "number" },
-  { header: "Kotikunta", property: "hometown" }
-]
+const headers = ["Nimi", "Numero", "Kotikunta"]
 
 stories.add("Table", () => {
 
@@ -27,4 +41,3 @@ stories.add("Table", () => {
     </div>
   )
 })
-

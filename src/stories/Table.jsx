@@ -44,23 +44,7 @@ const Table = ({ parentData, parentHeaders }) => {
     setSortedData(sortedlist)
     setFilteredData(sortedlist)
   }
-  /*
-  const makeSortedList = () => {
-    const listOfValues = data.map(obj => {
-      return obj.hometown
-    })
-    const sortedList = listOfValues.sort()
-  }
-  makeSortedList()
-  //sortataan nimilista
 
-  //tehdään uusi lista, missä 
-
-  console.log(sortedlist)
-  setFilter()
-  setSortedData(sortedlist)
-}
-*/
 
   return (
     <div>
