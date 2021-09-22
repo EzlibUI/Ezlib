@@ -45,6 +45,7 @@ const Table = ({ parentData, parentHeaders }) => {
     setFilteredData(sortedlist)
   }
 
+  console.log(parentHeaders)
 
   return (
     <div>

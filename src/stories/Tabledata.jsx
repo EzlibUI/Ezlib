@@ -7,6 +7,7 @@ const Tabledata = ({ headers, content, handleSort }) => {
     <table>
       <tr> {/*Headerin data */}
         {headers.map(header => {
+          console.log(headers)
           return <th onClick={handleSort} name={header.property}>{header.header}</th>
         })}
       </tr>
