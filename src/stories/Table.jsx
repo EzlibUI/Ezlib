@@ -18,7 +18,6 @@ const Table = ({ parentData, parentHeaders }) => {
 
   const handleFilter = (e) => {
     setFilter(e.target.value);
-    console.log(e.target.value, typeof (e.target.value))
     //käsitellä alkuperäistä dataa
     const result = sortedData.filter(data => {
       //haetaan objektin avaimet ja niiden arvot
@@ -36,20 +35,21 @@ const Table = ({ parentData, parentHeaders }) => {
 
   const handleSort = (e) => {
     const property = e.target.getAttribute("name");
-    console.log(property);
 
     const sortedlist = [...filteredData].sort((a, b) => {
-      return ("" + a[property]).localeCompare(b[property])
+      return (String(a[property])).localeCompare(b[property])
     })
+
+    setSortBy(property);
     setSortedData(sortedlist)
     setFilteredData(sortedlist)
   }
 
-  console.log(parentHeaders)
+
 
   return (
     <div>
-      <label For="filter">Filter by name: </label>
+      <label>Filter by name: </label>
       <input type="text" onChange={handleFilter} name="filter" value={filter}></input>
       <Tabledata headers={parentHeaders} content={filteredData} handleSort={handleSort} />
     </div>

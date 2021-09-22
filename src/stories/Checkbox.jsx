@@ -8,7 +8,7 @@ const Checkbox = ({ name, id, content }) => {
   return (
     <div className='checkbox' >
       <input name={name} id={id} type="checkbox" />
-      <label for={name}>{content}</label>
+      <label>{content}</label>
     </div>
   )
 }

@@ -5,36 +5,19 @@ import Table from "./Table";
 const stories = storiesOf("Table", module);
 
 const peopleList = [
-  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
-  { name: "Joonas", number: "091239123", hometown: "Kerava" },
-  { name: "Miika", number: "054123912", hometown: "Kerava" },
-  { name: "Miska", number: "041239123", hometown: "Helsinki" },
-  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
-  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
-  { name: "Joonas", number: "091239123", hometown: "Kerava" },
-  { name: "Miika", number: "054123912", hometown: "Kerava" },
-  { name: "Miska", number: "041239123", hometown: "Helsinki" },
-  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
-  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
-  { name: "Joonas", number: "091239123", hometown: "Kerava" },
-  { name: "Miika", number: "054123912", hometown: "Kerava" },
-  { name: "Miska", number: "041239123", hometown: "Helsinki" },
-  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
-  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
-  { name: "Joonas", number: "091239123", hometown: "Kerava" },
-  { name: "Miika", number: "054123912", hometown: "Kerava" },
-  { name: "Miska", number: "041239123", hometown: "Helsinki" },
-  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
-  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
-  { name: "Joonas", number: "091239123", hometown: "Kerava" },
-  { name: "Miika", number: "054123912", hometown: "Kerava" },
-  { name: "Miska", number: "041239123", hometown: "Helsinki" },
-  { name: "Daniel", number: "056239123", hometown: "Tuusula" }]
+  { id: 2334, name: "testaaja1", hobby: "sleeping", favLang: "JavaScript" },
+  { id: 3125, name: "testaaja2", hobby: "eating", favLang: "C#" },
+  { id: 12, name: "testaaja3", hobby: "football", favLang: "PHP" },
+  { id: 653, name: "testaaja4", hobby: "hockey", favLang: "JavaScript" },
+  { id: 342345, name: "testaaja5", hobby: "playing", favLang: "Python" },
+  { id: 6765, name: "testaaja6", hobby: "coding", favLang: "Java" },
+]
 
 const headers = [
-  { header: "nimi", property: "name" },
-  { header: "numero", property: "number" },
-  { header: "kunta", property: "hometown" }
+  { header: "ID", property: "id" },
+  { header: "Nimi", property: "name" },
+  { header: "Harrastus", property: "hobby" },
+  { header: "Suosikki kieli", property: "favLang" }
 ]
 
 stories.add("Table", () => {
