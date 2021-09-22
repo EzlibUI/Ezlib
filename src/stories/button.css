@@ -7,17 +7,10 @@
   display: inline-block;
   line-height: 1;
 }
-<<<<<<< HEAD
 .storybook-button--primary {
   color: green;
   background-color: #1ea7fd;
 }
-=======
- .storybook-button--primary {
-  color: green;
-  background-color: #1ea7fd;
-} 
->>>>>>> miska
 .storybook-button--secondary {
   color: rgb(58, 42, 42);
   background-color: transparent;
