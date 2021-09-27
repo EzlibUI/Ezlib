@@ -1,6 +1,6 @@
 import React from "react"
 import { storiesOf } from '@storybook/react'
-import Table from "./Table";
+import { Table } from "../components/Table/Table";
 
 const stories = storiesOf("Table", module);
 
