@@ -1,6 +1,6 @@
 import React from "react"
 import { storiesOf } from '@storybook/react'
-import Tabledata from "./Tabledata";
+import { Tabledata } from "../components/Tabledata/Tabledata";
 
 const stories = storiesOf("Tabledata", module);
 

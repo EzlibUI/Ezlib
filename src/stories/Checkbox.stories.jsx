@@ -1,4 +1,4 @@
-import Checkbox from './Checkbox'
+import Checkbox from '../components/Checkbox/Checkbox'
 import React from "react"
 import { storiesOf } from '@storybook/react'
 

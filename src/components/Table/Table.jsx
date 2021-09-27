@@ -1,8 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react"
+<<<<<<< HEAD
 import Tabledata from "./Tabledata";
 
 const Table = ({ parentData, parentHeaders }) => {
+=======
+import { Tabledata } from "../Tabledata/Tabledata";
+
+export const Table = ({ parentData, parentHeaders }) => {
+>>>>>>> f7106cac12bde74c6de6e6a95777562ee724e2c9
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([])
   const [filter, setFilter] = useState("");
@@ -55,5 +61,8 @@ const Table = ({ parentData, parentHeaders }) => {
     </div>
   )
 }
+<<<<<<< HEAD
 
 export default Table;
+=======
+>>>>>>> f7106cac12bde74c6de6e6a95777562ee724e2c9
