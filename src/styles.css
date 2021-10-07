@@ -1,3 +1,9 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 table, th, td {
   border: 1px solid gray;
   border-collapse: collapse;
@@ -38,4 +44,12 @@ tr:nth-child(even) {background-color: rgb(242, 248, 253);}
 label {
   font-family: Helvetica;
   font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  padding: 5px;
+  list-style: none;
+  text-decoration: none;
+  margin: 10px;
 }
