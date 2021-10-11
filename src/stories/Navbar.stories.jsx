@@ -10,8 +10,9 @@ const links = [
   { name: "Contact", destination: "/contact" },
   { name: "About", destination: "/about" },
   { name: "Sign up", destination: "/signup" },
-  { name: "Daniel", destination: "/daniel" }
+  { name: "Modal", destination: "/daniel" }
 ]
+
 
 
 stories.add("Navbar", () => {
