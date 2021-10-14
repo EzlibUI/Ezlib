@@ -146,32 +146,5 @@ border: 4px black solid;
 #exitModal {
   position: absolute;
   top: 3px;
-<<<<<<< HEAD
-  left: 280px;
-}
-
-#button {
-  border-radius: 5px;
-  padding: 8px 16px;
-  border: none;
-  background-image: linear-gradient(180deg, rgb(28, 174, 194), rgb(16, 120, 151)
-);
-  color: white;
-  font-family: 'Inter', sans-serif;
-}
-#button:hover {
-  cursor: pointer;
-}
-
-.button-click-effect {
-  display: none;
-  width: 0px;
-  height: 0px;
-  background-color: rgba(224, 224, 224, 0.267);
-}
-#button:active {
-  padding: 9px 17px;
-=======
   right: 4%;
->>>>>>> 6e2ee2ed2194cc4b54b1d019f5da160d2215def6
 }
