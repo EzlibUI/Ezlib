@@ -2,24 +2,23 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #292929;
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 table, th, td {
-  border: 1px solid gray;
   border-collapse: collapse;
 }
 
 th, td {
 padding: 5px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: Verdana, Tahoma, sans-serif;
 font-size: 20px;
 }
 
 table, th, td {
-  border: 1px solid rgb(39, 32, 32);
   border-collapse: collapse;
-  font-family: Helvetica;
+  font-family: Verdana, Tahoma, sans-serif;
   font-size: 20px;
   margin-top: 15px;
 }
@@ -38,41 +37,94 @@ td {
   text-align: center;
 }
 
-th:hover {background-color: rgb(148, 180, 250);}
+th:hover {background-color: rgb(146, 157, 255);}
 td:hover {background-color: rgb(148, 180, 250);}
 tr:nth-child(even) {background-color: rgb(242, 248, 253);}
 
 label {
-  font-family: Helvetica;
+  font-family: Verdana, Tahoma, sans-serif;
   font-size: 20px;
 }
 
+nav {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+}
+
 nav ul {
+  margin: -0;
   display: flex;
   list-style: none;
-}
+} 
+
 nav li {
+  margin: 15px;
   padding-left: 10px;
+  width: 100%;
+  color: rgb(255, 255, 255);
 }
+
 nav a {
   text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background-color: #383696;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  transition: ergb(32, 32, 32);  
 }
+
+nav a:hover {
+  background-color: #3B01E1;
+}
+
+.main_nav {
+  background-color: #444444;
+  /* padding: 4px 8px;
+  padding-top: 0px; */
+} 
 
 .modal {
 position: absolute;
 left: 50%;
-top: 50%;
+top: 350%;
 transform: translate(-50%, -50%);
-height: 200px;
-width: 300px;
-border: 2px  rgb(94, 94, 94) solid;
-background-color: #363636;
-
+min-height: 200px;
+min-width: 300px;
+max-width: 600px;
+border: 1px rgb(163, 163, 163);
+background-color: #444444;
+color: rgb(255, 255, 255);
+font-family: Verdana, Tahoma, sans-serif;
+border-radius: 20px;
+transition: ease-out 0.3s;
 }
+
+.modal:hover {
+  /* box-shadow: inset 300px 300px 300px 300px rgb(71, 114, 255); */
+  cursor: pointer;
+  position: absolute;
+  border: 1px  rgb(24, 24, 24) solid;
+  }
+  
+  /* .modal:hover::after {
+    transition: 0.5s all ease;
+    position: absolute;
+    content: "";
+    
+    
+    } */
+  
+  
 .modal-container {
-position: absolute;
-top: 30%;
-left:20%;
+padding: 20px;
+margin: 30px;
+font-size: 10px;
 }
 
 .modal-container input {
@@ -87,9 +139,14 @@ background-color: rgb(163, 163, 163);
 border: 4px black solid;
 }
 
+#forgotText {
+  font-size: 20px;
+}
+
 #exitModal {
-  position: relative;
+  position: absolute;
   top: 3px;
+<<<<<<< HEAD
   left: 280px;
 }
 
@@ -114,4 +171,7 @@ border: 4px black solid;
 }
 #button:active {
   padding: 9px 17px;
+=======
+  right: 4%;
+>>>>>>> 6e2ee2ed2194cc4b54b1d019f5da160d2215def6
 }
