@@ -29,7 +29,6 @@ export const Table = ({ parentData, parentHeaders }) => {
       return newString.includes(e.target.value) //tarkastetaan jos merkkijonoon sisältyy filteri
     })
     //filteröi datan filterin perusteella
-
     setFilteredData(result)
     //palauttaa datan filteredDatan stateen
   }

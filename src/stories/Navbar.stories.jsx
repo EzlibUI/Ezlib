@@ -9,8 +9,7 @@ const links = [
   { name: "Home", destination: "google.com" },
   { name: "Contact", destination: "/contact" },
   { name: "About", destination: "/about" },
-  { name: "Sign up", destination: "/signup" },
-  { name: "Modal", destination: "/daniel" }
+  { name: "Sign up", destination: "/daniel" }
 ]
 
 
