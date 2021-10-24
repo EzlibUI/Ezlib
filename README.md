@@ -11,7 +11,11 @@ React kirjasto, jossa on yhdessä komponentissa useampi toiminnallisuus ja valmi
 
 ## Käyttöönotto
 
-Kirjastomme voi ottaa käyttöön importtaamalla se komennolla `npm install Ezlib-ui` tai `npm i Ezlib-ui`.
+Kirjastomme voi ottaa käyttöön asentamalla sen terminaalissa komennolla `npm install Ezlib-ui` tai `npm i Ezlib-ui`. Komponentit saa käyttöön lisäämällä ne tiedostoon `import { Table, Button, Navbar } from 'ezlib-ui';`.
+
+## Käyttäminen
+
+
 
 ## Teknologiat
 
