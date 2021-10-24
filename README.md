@@ -1,6 +1,8 @@
 # Ohjelmistoprojekti II Ezlib
 
-Tiimijäsenet: Oliver Hyryläinen, Daniel Tarsalainen, Joonas Niskanen, Miska Vivolin ja Miika Vähänen
+## Tiimi
+
+Oliver Hyryläinen, Daniel Tarsalainen, Joonas Niskanen, Miska Vivolin ja Miika Vähänen
 
 ## Projektin idea
 
