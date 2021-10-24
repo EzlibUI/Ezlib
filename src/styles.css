@@ -165,13 +165,13 @@ background-color: rgb(55, 55, 55);
   color: rgb(230, 230, 230)
 }
 
-#login {
+.modalButton {
   margin-right: 20px;
   color: white;
   
 }
 
-#login:hover {
+.modalButton:hover {
   background-color: rgb(18, 211, 92);
 }
 
