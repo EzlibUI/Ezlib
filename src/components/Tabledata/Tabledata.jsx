@@ -1,13 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-import './tabledata.css';
-
-const Tabledata = ({ headers, content, handleSort }) => {
-=======
 import '../../styles.css';
 
 export const Tabledata = ({ headers, content, handleSort }) => {
->>>>>>> f7106cac12bde74c6de6e6a95777562ee724e2c9
 
   return (
     <table>
@@ -33,8 +27,3 @@ export const Tabledata = ({ headers, content, handleSort }) => {
     </table>
   )
 }
-<<<<<<< HEAD
-
-export default Tabledata;
-=======
->>>>>>> f7106cac12bde74c6de6e6a95777562ee724e2c9
