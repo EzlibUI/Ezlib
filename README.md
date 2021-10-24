@@ -24,9 +24,7 @@ Luo ohjelmasi esimerkiksi allaesitetyllä tavalla:
 
 ```
 import React from "react"
-import { Table, Button, Navbar } from 'ezlib-ui';
-
-const stories = storiesOf("Navbar", module);
+import { Button, Navbar } from 'ezlib-ui';
 
 const links = [
   { name: "Home", destination: "/home" },
