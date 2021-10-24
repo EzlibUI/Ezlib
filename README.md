@@ -17,12 +17,12 @@ React kirjasto, jossa on yhdessä komponentissa useampi toiminnallisuus ja valmi
 ## Käyttäminen
 Luo ohjelmasi esimerkiksi allaesitetyllä tavalla:
 
-### Ohjelman
+### Ohjelman esimerkkitoteutus
 
 
 ```
 import React from "react"
-import {  Button, Navbar } from 'ezlib-ui';
+import { Button, Navbar } from 'ezlib-ui';
 
 function App() {
 
