@@ -2,7 +2,7 @@
 
 ## Tiimi
 
-Oliver Hyryläinen, Daniel Tarsalainen, Joonas Niskanen, Miska Vivolin ja Miika Vähänen
+Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin ja Miika Vähänen
 
 ## Projektin idea
 
