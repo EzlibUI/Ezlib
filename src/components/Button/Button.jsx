@@ -1,13 +1,8 @@
 import React from "react";
 
-export const Button = ({ event, text , id}) => {
-
-  const clickEvents = () => {
-    clickAnimation();
-    event();
-  }
+export const Button = ({ event, text, id }) => {
 
   return (
-    <button class="button" id={id} onClick={clickEvents} >{text} <span className="button-click-effect"></span></button>
+    <button class="button" id={id} onClick={event} >{text} <span className="button-click-effect"></span></button>
   )
 }
