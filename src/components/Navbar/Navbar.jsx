@@ -4,7 +4,7 @@ import { Modal } from "../Modal/";
 
 export const Navbar = ({ links, modalInfo, modalButtons }) => {
 
-    const [modal, setModal] = useState(true);
+    const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
     return (
