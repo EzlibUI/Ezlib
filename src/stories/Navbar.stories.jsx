@@ -15,28 +15,35 @@ const links = [
 ]
 
 const modalButtons = [
-  { text: "Log in", 
-  icon: <FontAwesomeIcon icon={faSignInAlt} />,
-  content: (
-    <div>
-      <h1> Log in
-      </h1>
-      <form id="login-form">
-        <input type="text" placeholder="Emöil" />
-        <br />
-        <input type="password" placeholder="Password" />
-        <br />
-        <div id="forgotText">
-          <a href="url" >Forgot password??</a>
-        </div>
-        <Button id={"login-button"} text={<div> Log in </div>} />
-      </form>
-    </div>
-  ) 
- },
   {
-     text: "Email" 
+    text: "Log in",
+    icon: <FontAwesomeIcon icon={faSignInAlt} />,
+    content: (
+      <div>
+        <h1> Log in
+        </h1>
+        <form id="login-form">
+          <input type="text" placeholder="Email" />
+          <br />
+          <input type="password" placeholder="Password" />
+          <br />
+          <div id="forgotText">
+            <a href="url" >Forgot your password?</a>
+          </div>
+          <Button id={"login-button"} text={<div> Log in </div>} />
+        </form>
+      </div>
+    )
+  },
+  {
+    text: "Email"
   }
+]
+
+const textArea = [
+  <textarea>
+    Content of the textarea.
+  </textarea>
 ]
 
 //const [hello, setHello] = useState("Log in");
@@ -46,12 +53,12 @@ const modalInfo = (
     <h1> Log in
     </h1>
     <form id="login-form">
-      <input type="text" placeholder="Emöil" />
+      <input type="text" placeholder="Email" />
       <br />
       <input type="password" placeholder="Password" />
       <br />
       <div id="forgotText">
-        <a href="url" >Forgot password??</a>
+        <a href="url" >Forgot your password?</a>
       </div>
       <Button id={"login-button"} text={<div> Log in </div>} />
     </form>
