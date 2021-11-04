@@ -4,31 +4,40 @@ import { Button } from "../Button/Button";
 import { Modal } from "../Modal/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon } from "@fortawesome/free-regular-svg-icons";
 
 export const Navbar = ({ links, modalInfo, modalButtons }) => {
     const [modal, setModal] = useState(true);
     const [colorMode, setColorMode] = useState("dark");
-
     const toggle = () => setModal(!modal);
 
     // reference
     function toggleColorMode() {
         const root = document.documentElement;
-        
-        if(colorMode === "dark"){
+
+        if (colorMode === "dark") {
             //settaa light mode päälle
             root.style.setProperty('--main-background-color', "#F0F0F0");
             root.style.setProperty('--modal-background-color', "#f0f0f0");
-            root.style.setProperty('--input-color', "#ffffff");
-            root.style.setProperty('--input-focused', "#EAEAEA")
+            root.style.setProperty('--input-background-color', "#ffffff");
+            root.style.setProperty('--input-focused', "#EAEAEA");
+            root.style.setProperty('--modal-text', "black");
+            root.style.setProperty('--input-color', "#000000");
+            root.style.setProperty('--modal-hover-color', "#e6e6e6");
+
             setColorMode("light");
+
         } else {
             //settaa dark mode päälle
             root.style.setProperty('--main-background-color', "#292929");
             root.style.setProperty('--nav-li-color', "white");
             root.style.setProperty('--modal-background-color', "#444444");
-            root.style.setProperty('--input-color', "#303030");
-            root.style.setProperty('--input-focused', "#373737")
+            root.style.setProperty('--input-background-color', "#303030");
+            root.style.setProperty('--input-focused', "#373737");
+            root.style.setProperty('--modal-text', "white");
+            root.style.setProperty('--input-color', "#DCDBDB");
+            root.style.setProperty('--modal-hover-color', "#414040");
+
             setColorMode("dark");
         }
     }
@@ -44,7 +53,7 @@ export const Navbar = ({ links, modalInfo, modalButtons }) => {
                     })}
                 </ul>
                 <ul>
-                    <button onClick={toggleColorMode}><FontAwesomeIcon icon={faSun}/></button>
+                    <a onClick={toggleColorMode}><FontAwesomeIcon icon={colorMode === "dark" ? faMoon : faSun} color="yellow" style={{ cursor: "pointer" }} /></a>
                     {modalButtons.map((modalbutton, index) => {
                         return (
                             <a class="nav-option modalButton" onClick={() => toggle()}>
