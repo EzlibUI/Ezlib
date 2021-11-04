@@ -6,10 +6,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 
-export const Navbar = ({ links, modalInfo, modalButtons }) => {
-    const [modal, setModal] = useState(true);
+export const Navbar = ({ links, modalData, children }) => {
+    const [modal, setModal] = useState(false);
+    const [modalContent, setModalContent] = useState("");
     const [colorMode, setColorMode] = useState("dark");
-    const toggle = () => setModal(!modal);
+    const toggle = (content) => {
+        setModal(!modal);
+        setModalContent(content);
+    }
 
     // reference
     function toggleColorMode() {
@@ -52,17 +56,24 @@ export const Navbar = ({ links, modalInfo, modalButtons }) => {
                         return <li><a class="nav-option" href={item.destination}>{item.name}</a></li>
                     })}
                 </ul>
+                {children}
                 <ul>
                     <a onClick={toggleColorMode}><FontAwesomeIcon icon={colorMode === "dark" ? faMoon : faSun} color="yellow" style={{ cursor: "pointer" }} /></a>
-                    {modalButtons.map((modalbutton, index) => {
+                    {
+                    modalData 
+                    ? 
+                    modalData.map((modalObject, index) => {
                         return (
-                            <a class="nav-option modalButton" onClick={() => toggle()}>
-                                {modalbutton.text}  {modalbutton.icon} </a>
+                            <a class="nav-option modalButton" onClick={() => toggle(modalObject.content)}>
+                                {modalObject.text}  {modalObject.icon} </a>
                         )
-                    })}
+                    })
+                     : 
+                     null
+                     }
                 </ul>
             </nav>
-            <Modal show={modal} toggle={toggle} content={modalInfo} />
+            <Modal show={modal} toggle={toggle} content={modalContent} />
         </div>
     )
     //Navbar();
