@@ -47,10 +47,11 @@ export const Table = ({ parentData, parentHeaders }) => {
   console.log(parentHeaders)
 
   return (
-    <div>
-      <label For="filter">Filter by name: </label>
-      <input type="text" onChange={handleFilter} name="filter" value={filter}></input>
-      <Tabledata headers={parentHeaders} content={filteredData} handleSort={handleSort} />
+    <div className="tableholder">
+      <div>
+        <input type="text" onChange={handleFilter} name="filter" value={filter} placeholder="Search" className="table-input-style"></input>
+        <Tabledata headers={parentHeaders} content={filteredData} handleSort={handleSort} />
+      </div>
     </div>
   )
 }

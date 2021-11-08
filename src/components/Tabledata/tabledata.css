@@ -1,8 +1,8 @@
-table, th, td {
+/* table, th, td {
   border: 1px solid rgb(39, 32, 32);
   border-collapse: collapse;
   font-family: Helvetica;
-  font-size: 20px;
+  font-size: 10px;
   margin-top: 15px;
 }
 
@@ -26,5 +26,5 @@ tr:nth-child(even) {background-color: rgb(242, 248, 253);}
 
 label {
   font-family: Helvetica;
-  font-size: 20px;
-}
+  font-size: 10px;
+} */

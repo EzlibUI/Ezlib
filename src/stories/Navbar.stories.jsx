@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar/";
 import { Button } from "../components/Button/Button";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ThemeSwitch } from "../components/ThemeSwitch";
 
 const stories = storiesOf("Navbar", module);
 
@@ -52,9 +53,7 @@ const modalData = [
           <br />
           <input type="text" placeholder="Confirm password" />
           <br />
-
           <div className="forgotText"><a href="url"  >Already a member? Sign in </a></div>
-
           <Button id={"signup-button"} text={<div> Sign up </div>} />
         </form>
       </div>
@@ -91,7 +90,9 @@ const modalData = [
 stories.add("Navbar", () => {
   return (
     <div>
-      <Navbar links={links} modalData={modalData}/>
+      <Navbar links={links} modalData={modalData}>
+        <ThemeSwitch /> {/* Huom! props.children */}
+      </Navbar>
     </div>
   )
 })

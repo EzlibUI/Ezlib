@@ -32,9 +32,9 @@ const peopleList = [
   { name: "Daniel", number: "056239123", hometown: "Tuusula" }]
 
 const headers = [
-  { header: "nimi", property: "name" },
-  { header: "numero", property: "number" },
-  { header: "kunta", property: "hometown" }
+  { header: "Nimi", property: "name" },
+  { header: "Numero", property: "number" },
+  { header: "Kunta", property: "hometown" }
 ]
 
 stories.add("Table", () => {
