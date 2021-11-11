@@ -14,14 +14,14 @@ export const Navbar = ({ links, modalData, children }) => {
 
     return (
         <div>
-            <nav>
+            <nav className="navigation-nav">
                 <ul class="main_nav">
                     {links.map(item => {
                         return <li><a class="nav-option" href={item.destination}>{item.name}</a></li>
                     })}
                 </ul>
                 <ul>
-                {children}
+                    {children}
                     {
                         modalData
                             ?

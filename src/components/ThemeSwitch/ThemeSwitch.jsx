@@ -20,6 +20,12 @@ export const ThemeSwitch = () => {
       root.style.setProperty('--modal-background-color', "#f0f0f0");
       root.style.setProperty('--modal-hover-color', "#e6e6e6");
       root.style.setProperty('--modal-text', "black");
+      root.style.setProperty('--table-background', "white");
+      root.style.setProperty('--table-color', "#292929");
+      root.style.setProperty('--table-header', "rgb(235,235,235)");
+      root.style.setProperty('--table-header-color', "#292929");
+      root.style.setProperty('--main-color', "#292929");
+
 
       setColorMode("light");
 
@@ -34,6 +40,12 @@ export const ThemeSwitch = () => {
       root.style.setProperty('--modal-hover-color', "#414040");
       root.style.setProperty('--modal-text', "white");
       root.style.setProperty('--nav-li-color', "#8b8b8b");
+      root.style.setProperty('--table-background', "#444444");
+      root.style.setProperty('--table-header', "#292929");
+      root.style.setProperty('--table-header-color', "white");
+      root.style.setProperty('--table-color', "white");
+      root.style.setProperty('--main-color', "white");
+
 
       setColorMode("dark");
     }

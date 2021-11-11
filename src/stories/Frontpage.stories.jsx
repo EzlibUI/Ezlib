@@ -92,6 +92,54 @@ const peopleList = [
   { name: "Joonas", number: "091239123", hometown: "Kerava" },
   { name: "Miika", number: "054123912", hometown: "Kerava" },
   { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
+  { name: "Daniel", number: "056239123", hometown: "Tuusula" },
+  { name: "Oliver", number: "091239123", hometown: "Helsinki" },
+  { name: "Joonas", number: "091239123", hometown: "Kerava" },
+  { name: "Miika", number: "054123912", hometown: "Kerava" },
+  { name: "Miska", number: "041239123", hometown: "Helsinki" },
   { name: "Daniel", number: "056239123", hometown: "Tuusula" }]
 
 const headers = [
@@ -99,8 +147,6 @@ const headers = [
   { header: "Numero", property: "number" },
   { header: "Kunta", property: "hometown" }
 ]
-
-
 
 stories.add("Frontpage", () => {
 
@@ -110,6 +156,8 @@ stories.add("Frontpage", () => {
         <ThemeSwitch />
       </Navbar>
       <Table parentData={peopleList} parentHeaders={headers} />
+      <p>P tekstiä</p>
+      <h1>H1 Otsikko</h1>
     </div>
   )
 })
