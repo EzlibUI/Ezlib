@@ -22,31 +22,31 @@ export const Navbar = ({ links, modalData, children }) => {
     return (
         <div>
             <nav className="navigation-nav">
-            <button className="nav-button"> <FontAwesomeIcon icon={faBars} /></button>
-                <div>
-                    <ul class="main_nav">
+                <button className="nav-button"> <FontAwesomeIcon icon={faBars} /></button>
+                <ul class="main_nav">
                         {links.map(item => {
                             return <li><a class="nav-option" href={item.destination}>{item.name}</a></li>
                         })}
-                    </ul>
-                    <ul>
-                        {children}
-                        {
-                            modalData
-                                ?
-                                modalData.map((modalObject, index) => {
-                                    return (
-                                        <a class="nav-option modalButton" onClick={() => toggle(modalObject.content)}>
-                                            {modalObject.text}  {modalObject.icon} </a>
-                                    )
-                                })
-                                :
-                                null
-                        }
-                    </ul>
-                </div>
+                </ul>
+                <ul>
+                    {children}
+                    {
+                        modalData
+                            ?
+                        modalData.map((modalObject, index) => {
+                            return (
+                                <div class="nav-modalButtons">
+                                <a class="nav-option modalButton" onClick={() => toggle(modalObject.content)}>
+                                    {modalObject.text}  {modalObject.icon} </a>
+                                </div>
+                            )
+                        })
+                            :
+                        null
+                    }
+                </ul>
             </nav>
-            <Modal closeTimeoutMS={500} show={modal} toggle={toggle} content={modalContent} />
+            <Modal show={modal} toggle={toggle} content={modalContent} />
         </div>
     )
 }

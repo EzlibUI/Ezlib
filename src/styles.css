@@ -325,11 +325,11 @@ ul {
 
 @media only screen and (max-width: 500px) {
   body {
-    background-color: lightblue;
+    background-color: white;
   }
 
   .navigation-nav ul {
-    display: none;
+    margin-left: 0px;
   }
 
   .nav-button {
@@ -337,4 +337,21 @@ ul {
     display: block;
   }
   
+  .tableholder {
+    margin-left: 0px;
+    margin-right: 0px;
+    
+  }
+
+  .nav-modalButtons {
+    display: none;
+  }
+
+  nav .nav-option {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 12px;
+  }
+
+
 }
