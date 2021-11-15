@@ -59,34 +59,6 @@ body {
   margin-top: 5px;
 }
 
-.pagination-nav {
-  display: flex;
-  justify-content: right;
-}
-
-
-.tableButton{
-  background-image: linear-gradient(180deg, rgb(129, 129, 129), rgb(116, 116, 116) );
-  padding: 6px 10px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-.tableButton-selected{
-  background-image: linear-gradient(180deg, rgb(18, 211, 92), rgb(14, 167, 72) );
-  padding: 6px 10px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
 .button:hover {
   background-image: linear-gradient(180deg, rgb(53, 197, 108), rgb(53, 192, 106) );
 }
@@ -137,7 +109,7 @@ body {
   color: var(--modal-text);
   font-family: Verdana, Tahoma, sans-serif;
   font-family: 'Inter', 'Roboto', sans-serif;
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: 0 0 5px black;
 }
 
@@ -164,7 +136,6 @@ body {
   min-width: 250px;
   padding: 8px;
   margin-bottom: 4px;
-  border-radius: 5px;
   border: none;
   color: var(--input-color);
   font-family: Verdana, Tahoma, sans-serif;
@@ -176,14 +147,8 @@ body {
 .modal-container input:focus{
   background-color: var(--input-focused);
 }
-
-.modalButton {
-  color: white;
-  margin-left: 20px
-}
-
-.modalButton:hover {
-  background-color: rgb(18, 211, 92);
+.nav-button {
+  display: none;
 }
 
 .navigation-nav {
@@ -197,7 +162,6 @@ body {
 }
 
 nav li {
-  margin-right: 15px;
   color: var(--nav-li-color);
 }
 
@@ -213,6 +177,7 @@ nav .nav-option {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 0px;
+  margin-left: 15px;
   transition: ergb(32, 32, 32);  
 }
 
@@ -229,6 +194,11 @@ top: 30px;
 color:rgb(146, 157, 255);
 }
 */
+
+.pagination-nav {
+  display: flex;
+  justify-content: right
+}
 
 table, th, td {
   border-collapse: collapse;
@@ -259,6 +229,28 @@ tr:nth-child(odd) {
 }
 */
 
+.tableButton{
+  background-image: linear-gradient(180deg, rgb(129, 129, 129), rgb(116, 116, 116) );
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.tableButton-selected{
+  background-image: linear-gradient(180deg, rgb(18, 211, 92), rgb(14, 167, 72) );
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
 .tableholder tr td {
   border-bottom: #afafaf 1px solid;
   border-radius: 5px;
@@ -273,10 +265,9 @@ tr:nth-child(odd) {
 
 .tableholder{
   background-color: var(--table-background);
-  height: 500px;
   /* overflow-y: auto; */
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 10px;
   color: var(--table-color);
   /* border-radius: 500px; */
@@ -306,7 +297,11 @@ ul {
   color: white;
 }
 
-width
+.page-item {
+  margin-left: 10px;
+}
+
+/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -324,4 +319,22 @@ width
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: /*#555*/pink;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .navigation-nav ul {
+    display: none;
+  }
+
+  .nav-button {
+    float: right;
+    display: block;
+  }
+  
 }
