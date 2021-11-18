@@ -116,13 +116,13 @@ Which would look like this:
 
 ### const links
 
-`const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar which by pressing, redirect the user to the location which is defined in the `destination` -attribute.
+`const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar which by pressing, redirect the user to the location, which is defined in the `destination` -attribute.
 
 ![image](https://user-images.githubusercontent.com/78149945/142477747-d68ab3b9-e95a-458a-b145-4e5b5b36b0ef.png)
 
 ### const modalData
 
-`const modalData` -table takes in objects which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link.
+`const modalData` -table takes in objects which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar, which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link.
 
 ![image](https://user-images.githubusercontent.com/78149945/142477887-5f922194-5a41-47c8-b25b-f9b9bfc9a9a1.png)
 
@@ -133,7 +133,7 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 
 ### const tableHeader
 
-`const tableHeader` -table takes in objects, which have `header` and `property` -attributes. The `header` attribute is the name of the <th> element which doesn't appear in the code and the `property` -attribute creates the text for each individual object in the table header.
+`const tableHeader` -table takes in objects, which have `header` and `property` -attributes. The `header` attribute is the name of the <th> element, which doesn't appear in the code. The `property` -attribute creates the text for each individual object in the table header.
   
 ![image](https://user-images.githubusercontent.com/78149945/142480205-fe95f3a3-5ab1-4663-8b6c-0e7e8be66468.png)
   
@@ -146,7 +146,7 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 
 ### Style design 
 
-Our styles are done with css and can be found from the `styles.css` file. Ezlib-UI has a built-in dark mode which can be switched to light mode by pressing the moon symbol. Dark mode can again be activated by pressing the sun symbol.
+Our styles are done with css and can be found from the `styles.css` file. Ezlib-UI has a built-in dark mode, which can be switched to light mode by pressing the moon symbol. Dark mode can again be activated by pressing the sun symbol.
   
 ![image](https://user-images.githubusercontent.com/78149945/142479892-1f42ae1a-2b7c-4565-a1e8-195f0e58f354.png)
 
