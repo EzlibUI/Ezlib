@@ -105,7 +105,7 @@ A react library designed for programmers looking for a stylish template for thei
 
 ## Get started
 
-This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. The user can import the individual components they want to use by typing the import code lines into their js. file , which all include:  `import { Navbar } from "../components/Navbar/";`, `import { Button } from "../components/Button/Button";`, `import { ThemeSwitch } from "../components/ThemeSwitch/";`, `import { Table } from "../components/Table/";`, There's also a couple importable icons `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components, which take in props, need to be rendered.
+This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. The user can import the individual components they want to use by typing the import code into their js. file , which all include:  `import { Navbar } from "../components/Navbar/";`, `import { Button } from "../components/Button/Button";`, `import { ThemeSwitch } from "../components/ThemeSwitch/";`, `import { Table } from "../components/Table/";`, There's also a couple importable icons `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components, which take in props, need to be rendered.
 
 ## Usage
 
@@ -219,13 +219,14 @@ Which would look like this:
 
 `const links` -table takes in objects, which have `name`- and `destination` -attributes. These objects create links to the navbar which by pressing, redirect the user to the location which is defined in the `destination` -attribute.
 
-### const modalButtons
+### const modalData
 
-`const modalButtons` -table takes in objects, which have `text` -attributes. These `modalButtons` define buttons, which by pressing the user gets a window, which has predefined attributes. E.g., Login function.
+`const modalData` -table takes in objects which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link. The `content` -attribute takes in jsx-code, through which modal-window contents are defined. The user can create new input fields for example.
 
-### const modalInfo
 
-`const modalInfo` -variable takes in jsx-code, through which modal-window contents are defined. The user can create new input fields for example.
+### const peopleList
+
+`const links` -table takes in objects, which by default have `name`- and `dest` -attributes.
 
 
 ### Style design 
