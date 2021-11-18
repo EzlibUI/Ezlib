@@ -101,15 +101,15 @@ Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin ja Miika 
 
 ## Ezlib-UI
 
-A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as an ready-to-use application. Our goal is to provide a quick and easy base which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
+A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as a ready-to-use application. Ezlib-UI is a quick and easy component package which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
 
 ## Introduction
 
-This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. Import the component by typing `import { Table, Button, Navbar } from 'ezlib-ui';` into your js file. The importable functionalities can be limited by typing only the ones your program uses inside the curly brackets, for example typing `import { Button, Navbar } from 'ezlib-ui';` if Navbar and Button are the only functionalities you need.
+This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. The user can import the individual components they want to use by typing the import code lines into their js. file , which all include:  `import { Navbar } from "../components/Navbar/";`, `import { Button } from "../components/Button/Button";`, `import { ThemeSwitch } from "../components/ThemeSwitch/";`, `import { Table } from "../components/Table/";`, There's also a couple importable icons `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components need to be rendered with props.
 
 ## Usage
 
-For example, create your program as follows:
+The program can be created as follows:
 
 ```
 import React from "react";
@@ -216,7 +216,7 @@ Which would look like this:
 
 ### Detailed instructions
 
-The individual components within Ezlib-UI take in props. Here are specifications how the props are transmitted:
+The individual components within Ezlib-UI take in props. Here are specifications of how the props are transmitted:
 
 ### const links
 
