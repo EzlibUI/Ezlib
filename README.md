@@ -105,7 +105,7 @@ A react library designed for programmers looking for a stylish template for thei
 
 ## Get started
 
-This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. The user can import the individual components they want to use by typing the import code into their js. file , which all include:  `import { Navbar } from "../components/Navbar/";`, `import { Button } from "../components/Button/Button";`, `import { ThemeSwitch } from "../components/ThemeSwitch/";`, `import { Table } from "../components/Table/";`, There's also a couple importable icons `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components, which take in props, need to be rendered.
+This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. Users can import individual components they want to use by typing them into their js. file: `import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';`, There's also a couple icons to be imported `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components, which take in props, need to be rendered.
 
 ## Usage
 
@@ -114,12 +114,10 @@ The program can be created as follows:
 
 ```
 import React from "react";
-import { Navbar } from "../components/Navbar/";
-import { Button } from "../components/Button/Button";
-import { Table } from "../components/Table/";
-import { ThemeSwitch } from "../components/ThemeSwitch/";
+import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default function App() {
 
