@@ -91,7 +91,7 @@ stories.add("Navbar", () => {
   return (
     <div>
       <Navbar links={links} modalData={modalData}>
-        <ThemeSwitch /> {/* Huom! props.children */}
+        <ThemeSwitch /> {/* NB! props.children */}
       </Navbar>
     </div>
   )

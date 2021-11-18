@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 const stories = storiesOf("test app", module);
 
 stories.add("App", () => {
-  //react koodi tänne
+  //react code here
   return (
     <div>
       <Checkbox name="eka" id={0} content="eka checkbox" />

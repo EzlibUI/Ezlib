@@ -32,18 +32,18 @@ export const Table = ({ parentData, parentHeaders }) => {
   const handleFilter = (e) => {
     setFilter(e.target.value);
     console.log(e.target.value, typeof (e.target.value))
-    //käsitellä alkuperäistä dataa
+    //käsitellä alkuperäistä dataa | handle the original data
     const result = sortedData.filter(data => {
-      //haetaan objektin avaimet ja niiden arvot
+      //haetaan objektin avaimet ja niiden arvot | get object's keys and their values
       const personData = Object.keys(data).map(key => {
         return data[key];
-      }) //objekti on muuttunut listaksi, jossa on vain objektin arvoja
-      const newString = personData.join(); //listan arvot liitetään yhteen merkkijonoksi
-      return newString.includes(e.target.value) //tarkastetaan jos merkkijonoon sisältyy filteri
+      }) //objekti on muuttunut listaksi, jossa on vain objektin arvoja | object has changed to array where is just object's values
+      const newString = personData.join(); //listan arvot liitetään yhteen merkkijonoksi | array's values will connect into a string
+      return newString.includes(e.target.value) //tarkastetaan jos merkkijonoon sisältyy filteri | check if there is filter included in string
     })
-    //filteröi datan filterin perusteella
+    //filteröi datan filterin perusteella | filters data based on the filter
     setFilteredData(result)
-    //palauttaa datan filteredDatan stateen
+    //palauttaa datan filteredDatan stateen | return data into filteredData's state
   }
 
   const handleSort = (e) => {

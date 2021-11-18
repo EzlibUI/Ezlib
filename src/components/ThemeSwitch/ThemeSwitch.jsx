@@ -11,7 +11,7 @@ export const ThemeSwitch = () => {
     const root = document.documentElement;
 
     if (colorMode === "dark") {
-      //settaa light mode päälle
+      //set light mode on
       root.style.setProperty('--input-background-color', "#ffffff");
       root.style.setProperty('--input-color', "#000000");
       root.style.setProperty('--input-focused', "#EAEAEA");
@@ -29,7 +29,7 @@ export const ThemeSwitch = () => {
       setColorMode("light");
 
     } else {
-      //settaa dark mode päälle
+      //set dark mode on
       root.style.setProperty('--input-background-color', "#303030");
       root.style.setProperty('--input-color', "#DCDBDB");
       root.style.setProperty('--input-focused', "#373737");

@@ -187,6 +187,24 @@ nav .nav-option {
   /* background-color: #3B01E1; */
 }
 
+.mobile-navigation {
+  background-color: green;
+  position: absolute;
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+/* .mobile-nav-option {
+  display: block;
+} */
+
+.nav_vertical {
+  display: block;
+}
+
 /*nav .login {
 position: absolute;
 right: 30px;
