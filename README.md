@@ -211,7 +211,7 @@ stories.add("Frontpage", () => {
 
 Which would look like this:
 
-![image](https://user-images.githubusercontent.com/78149945/142456661-727b5dfd-95e8-4d34-80c1-864e45898b3a.png)
+![image](https://user-images.githubusercontent.com/78149945/142471544-69ec8eae-ac25-49ca-a8a9-549bdfa8e2f0.png)
 
 
 
