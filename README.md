@@ -93,17 +93,17 @@ Komponentti ottaa vastaan eri propseja. Tässä on ohjeita, missä muodossa prop
 
 
 
-# English
+# Ezlib-UI
 
-## Team
+## Creators
 
 Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin ja Miika Vähänen
 
-## Ezlib-UI
+## What is Ezlib-UI?
 
 A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as a ready-to-use application. Ezlib-UI is a quick and easy component package which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
 
-## Introduction
+## Get started
 
 This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. The user can import the individual components they want to use by typing the import code lines into their js. file , which all include:  `import { Navbar } from "../components/Navbar/";`, `import { Button } from "../components/Button/Button";`, `import { ThemeSwitch } from "../components/ThemeSwitch/";`, `import { Table } from "../components/Table/";`, There's also a couple importable icons `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components need to be rendered with props.
 
