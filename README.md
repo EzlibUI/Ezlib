@@ -101,25 +101,25 @@ Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin ja Miika 
 
 ## What is Ezlib-UI?
 
-A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as a ready-to-use application. Ezlib-UI is a quick and easy component package which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
+A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as a ready-to-use application. Ezlib-UI is a quick and easy mobile-friendly component package which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
 
 ## Get started
 
-This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. The user can import the individual components they want to use by typing the import code lines into their js. file , which all include:  `import { Navbar } from "../components/Navbar/";`, `import { Button } from "../components/Button/Button";`, `import { ThemeSwitch } from "../components/ThemeSwitch/";`, `import { Table } from "../components/Table/";`, There's also a couple importable icons `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components need to be rendered with props.
+This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. The user can import the individual components they want to use by typing the import code lines into their js. file , which all include:  `import { Navbar } from "../components/Navbar/";`, `import { Button } from "../components/Button/Button";`, `import { ThemeSwitch } from "../components/ThemeSwitch/";`, `import { Table } from "../components/Table/";`, There's also a couple importable icons `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it is possible to import only one component for example. Lastly the individual components, which take in props, need to be rendered.
 
 ## Usage
 
 The program can be created as follows:
+(For react beginners we recommend copying the following code to your application and work your way from there)
 
 ```
 import React from "react";
-import { storiesOf } from '@storybook/react';
 import { Button } from "../components/Button/Button";
 import { Navbar } from "../components/Navbar/";
+import { Table } from "../components/Table/";
 import { ThemeSwitch } from "../components/ThemeSwitch/";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Table } from "../components/Table/";
 
 
 const stories = storiesOf("Frontpage", module);
@@ -214,9 +214,6 @@ Which would look like this:
 ![image](https://user-images.githubusercontent.com/78149945/142456661-727b5dfd-95e8-4d34-80c1-864e45898b3a.png)
 
 
-### Detailed instructions
-
-The individual components within Ezlib-UI take in props. Here are specifications of how the props are transmitted:
 
 ### const links
 
@@ -228,8 +225,7 @@ The individual components within Ezlib-UI take in props. Here are specifications
 
 ### const modalInfo
 
-`const modalInfo` -variable takes in jsx-code, through which modal-window contents are defined. The user can create new html input fields for example.
-
+`const modalInfo` -variable takes in jsx-code, through which modal-window contents are defined. The user can create new input fields for example.
 
 
 ### Style design 
