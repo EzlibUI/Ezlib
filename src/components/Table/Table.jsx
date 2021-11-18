@@ -37,7 +37,7 @@ export const Table = ({ parentData, parentHeaders }) => {
       //haetaan objektin avaimet ja niiden arvot | get object's keys and their values
       const personData = Object.keys(data).map(key => {
         return data[key];
-      }) //objekti on muuttunut listaksi, jossa on vain objektin arvoja | object has changed to array where is just object's values
+      }) //objekti on muuttunut listaksi, jossa on vain objektin arvoja | object has changed to array that contains only object's values
       const newString = personData.join(); //listan arvot liitetään yhteen merkkijonoksi | array's values will connect into a string
       return newString.includes(e.target.value) //tarkastetaan jos merkkijonoon sisältyy filteri | check if there is filter included in string
     })

@@ -5,6 +5,7 @@ import { Modal } from "../Modal/";
 import { ThemeSwitch } from "../ThemeSwitch/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = ({ links, modalData, children }) => {
     const [modal, setModal] = useState(false);
@@ -31,9 +32,9 @@ export const Navbar = ({ links, modalData, children }) => {
                     <nav className="navigation-nav">
                         <button className="nav-button" onClick={handleDrawer}> <FontAwesomeIcon icon={faBars} /> </button>
 
-                        <ul class="main_nav">
+                        <ul className="main_nav">
                             {links.map(item => {
-                                return <li><a class="nav-option" href={item.destination}>{item.name}</a></li>
+                                return <li><a className="nav-option" href={item.destination}>{item.name}</a></li>
                             })}
                         </ul>
 
@@ -45,8 +46,8 @@ export const Navbar = ({ links, modalData, children }) => {
                                     ?
                                     modalData.map((modalObject, index) => {
                                         return (
-                                            <div class="nav-modalButtons">
-                                                <a class="nav-option modalButton" onClick={() => toggle(modalObject.content)}>
+                                            <div className="nav-modalButtons">
+                                                <a className="nav-option modalButton non-mobile" onClick={() => toggle(modalObject.content)}>
                                                     {modalObject.text}  {modalObject.icon} </a>
                                             </div>
 
@@ -60,27 +61,23 @@ export const Navbar = ({ links, modalData, children }) => {
                     :
 
                     <div className="mobile-navigation">
-                        <button className="nav-button" onClick={handleDrawer}> <FontAwesomeIcon icon={faBars} /> </button>
+                        <button className="nav-button mobile-nav-button" onClick={handleDrawer}> <FontAwesomeIcon icon={faTimes} /> </button>
 
-                        <ul class="mobile-nav-container">
+                        <ul className="mobile-nav-container">
                             {links.map(item => {
-                                return <li class="mobile-nav-option"><a href={item.destination}>{item.name}</a></li>
-                            })}
-                        </ul>
+                                return <li className="mobile-nav-option"><a href={item.destination}>{item.name}</a></li>
+                            }
+                            )}
 
-                        <ul>
 
-                            {children}
                             {
                                 modalData
                                     ?
                                     modalData.map((modalObject, index) => {
                                         return (
-                                            <div class="nav-modalButtons">
-                                                <div className="nav_vertical">
-                                                <a class="mobile-nav-option modalButton" onClick={() => toggle(modalObject.content)}>
-                                                    {modalObject.text}  {modalObject.icon} </a>
-                                                </div>
+                                            <div className="nav-modalButtons">
+                                                <li><a className="mobile-nav-option modalButton" onClick={() => toggle(modalObject.content)}>
+                                                    {modalObject.text}  {modalObject.icon} </a></li>
                                             </div>
 
                                         )
@@ -88,6 +85,7 @@ export const Navbar = ({ links, modalData, children }) => {
                                     :
                                     null
                             }
+                            {children}
                         </ul>
                     </div>
             }
