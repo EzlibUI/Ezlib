@@ -112,52 +112,107 @@ This command installs the component and any packages that it depends on: `npm in
 For example, create your program as follows:
 
 ```
-import React from "react"
-import { Button, Navbar } from 'ezlib-ui';
+import React from "react";
+import { storiesOf } from '@storybook/react';
+import { Button } from "../components/Button/Button";
+import { Navbar } from "../components/Navbar/";
+import { ThemeSwitch } from "../components/ThemeSwitch/";
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Table } from "../components/Table/";
 
-function App() {
 
-  const links = [
-    { name: "Home", destination: "/home" },
-    { name: "Contact", destination: "/contact" },
-    { name: "About", destination: "/about" },
-    { name: "Sign up", destination: "/signup" }
-  ]
+const stories = storiesOf("Frontpage", module);
 
-  const modalButtons = [
-    {
-      text: "Log in"
-    },
-    {
-      text: "Email"
-    }
-  ]
 
-  const modalInfo = (
-    <div>
-      <h1> Log in
-      </h1>
-      <form id="login-form">
-        <input type="text" placeholder="Email" />
-        <br />
-        <input type="password" placeholder="Password" />
-        <br />
-        <div id="forgotText">
-          <a href="url" >Forgot password??</a>
-        </div>
-        <Button id={"login-button"} text={<div> Log in </div>} />
-      </form>
-    </div>
-  )
+const links = [
+  { name: "Home", destination: "/home" },
+  { name: "Contact", destination: "/contact" },
+  { name: "About", destination: "/about" },
+  { name: "Pictures", destination: "/pictures" }
+]
 
+const modalData = [
+  {
+    text: "Log in",
+    icon: <FontAwesomeIcon icon={faSignInAlt} />,
+    content: (
+      <div>
+        <h1> Log in
+        </h1>
+        <form id="login-form">
+          <input type="text" placeholder="Email" />
+          <br />
+          <input type="password" placeholder="Password" />
+          <br />
+          <div className="forgotText">
+            <a href="url" >Forgot your password?</a>
+          </div>
+          <Button id={"login-button"} text={<div> Log in </div>} />
+        </form>
+      </div>
+    )
+  },
+  {
+    text: "Sign up",
+    content: (
+      <div>
+        <h1> Sign up </h1>
+
+        <form id="signup-form">
+          <input type="text" placeholder="First Name" />
+          <br />
+          <input type="text" placeholder="Last Name" />
+          <br />
+          <input type="text" placeholder="Email" />
+          <br />
+          <input type="text" placeholder="Password" />
+          <br />
+          <input type="text" placeholder="Confirm password" />
+          <br />
+          <div className="forgotText"><a href="url"  >Already a member? Sign in </a></div>
+          <Button id={"signup-button"} text={<div> Sign up </div>} />
+        </form>
+      </div>
+    )
+  }
+]
+
+const peopleList = [
+  { name: "Daniel", number: "056239123", hometown: "Tuusula", picture: (<img src="https://image.laji.fi/MM.133557/iso-orava_Jen_Goellnitz_CC_BY-NC-SA_1_FI.jpg" alt="Logo" height="70px" width="70px" />) },
+  { name: "Miska", number: "056239854", hometown: "Helsinki", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) },
+  { name: "Miika", number: "056876123", hometown: "Vantaa", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) },
+  { name: "Joonas", number: "056239763", hometown: "Korvatunturi", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) },
+  { name: "Oliver", number: "056249623", hometown: "Addis Abeba", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) }
+]
+
+const headers = [
+  { header: "Nimi", property: "name" },
+  { header: "Numero", property: "number" },
+  { header: "Kunta", property: "hometown" },
+  { header: "Kuva", property: "picture" }
+]
+
+stories.add("Frontpage", () => {
 
   return (
     <div>
-      <Navbar links={links} modalInfo={modalInfo} modalButtons={modalButtons} />
+      <Navbar links={links} modalData={modalData}>
+        <ThemeSwitch />
+      </Navbar>
+      <Table parentData={peopleList} parentHeaders={headers} />
+      <h1>Header</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
     </div>
   )
-}
+})
 ```
+
+Which would look like this:
+
+![image](https://user-images.githubusercontent.com/78149945/142456661-727b5dfd-95e8-4d34-80c1-864e45898b3a.png)
+
 
 ### Detailed instructions
 
@@ -173,7 +228,9 @@ The individual components within Ezlib-UI take in props. Here are specifications
 
 ### const modalInfo
 
-`const modalInfo` -variable takes in jsx-code, through which modal-window contents are defined.
+`const modalInfo` -variable takes in jsx-code, through which modal-window contents are defined. The user can create new html input fields for example.
+
+
 
 ### Style design 
 
