@@ -101,7 +101,7 @@ Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin ja Miika 
 
 ## Ezlib-UI
 
-A react library, which has multiple functionalities in one component with a switchable dark mode style. Our goal is to provide a quick and easy base which is highly customizable for your own taste. In a nutshell, we provide our users a single npm component, which is a ready-made react dark mode website template.
+A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as an ready-to-use application. Our goal is to provide a quick and easy base which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
 
 ## Introduction
 
