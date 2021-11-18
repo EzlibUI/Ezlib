@@ -114,16 +114,14 @@ The program can be created as follows:
 
 ```
 import React from "react";
-import { Button } from "../components/Button/Button";
 import { Navbar } from "../components/Navbar/";
+import { Button } from "../components/Button/Button";
 import { Table } from "../components/Table/";
 import { ThemeSwitch } from "../components/ThemeSwitch/";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-const stories = storiesOf("Frontpage", module);
-
+export default function App() {
 
 const links = [
   { name: "Home", destination: "/home" },
@@ -180,20 +178,19 @@ const modalData = [
 
 const peopleList = [
   { name: "Daniel", number: "056239123", hometown: "Tuusula", picture: (<img src="https://image.laji.fi/MM.133557/iso-orava_Jen_Goellnitz_CC_BY-NC-SA_1_FI.jpg" alt="Logo" height="70px" width="70px" />) },
-  { name: "Miska", number: "056239854", hometown: "Helsinki", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) },
-  { name: "Miika", number: "056876123", hometown: "Vantaa", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) },
-  { name: "Joonas", number: "056239763", hometown: "Korvatunturi", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) },
-  { name: "Oliver", number: "056249623", hometown: "Addis Abeba", picture: (<img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/images/methode/2017/05/19/2b2d8790-3c6a-11e7-8ee3-761f02c18070_1280x720_204107.jpg?itok=hk8G0lyz" alt="Logo" height="70px" width="70px" />) }
+  { name: "Miska", number: "056239854", hometown: "Helsinki", picture: (<img src="http://www.suomensiiliyhdistys.fi/wp-content/uploads/2012/07/suklaa.jpg" alt="Logo" height="70px" width="70px" />) },
+  { name: "Miika", number: "056876123", hometown: "Vantaa", picture: (<img src="https://qph.fs.quoracdn.net/main-qimg-c63bc4aeebeffe10a3697a62176fd978-lq" alt="Logo" height="70px" width="70px" />) },
+  { name: "Joonas", number: "056239763", hometown: "Korvatunturi", picture: (<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiFkS-c5cwEDQE-ynNBqjsKeAx_mnHgURpHFNFAkee7L3pMQDMavq4el2U7ddfKLrXvA&usqp=CAU" alt="Logo" height="70px" width="70px" />) },
+  { name: "Oliver", number: "056249623", hometown: "Addis Abeba", picture: (<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBbW_5qGdM57K3D1edFkneXfRqw9uzlVsdjA&usqp=CAU" alt="Logo" height="70px" width="70px" />) }
 ]
 
 const headers = [
-  { header: "Nimi", property: "name" },
-  { header: "Numero", property: "number" },
-  { header: "Kunta", property: "hometown" },
-  { header: "Kuva", property: "picture" }
+  { header: "Name", property: "name" },
+  { header: "Number", property: "number" },
+  { header: "State", property: "hometown" },
+  { header: "Picture", property: "picture" }
 ]
 
-stories.add("Frontpage", () => {
 
   return (
     <div>
@@ -206,7 +203,7 @@ stories.add("Frontpage", () => {
       </p>
     </div>
   )
-})
+}
 ```
 
 Which would look like this:
