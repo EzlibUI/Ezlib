@@ -183,7 +183,7 @@ const tableHeader = [
   { header: "Picture", property: "picture" }
 ]
 
-const peopleList = [
+const tableList = [
   { name: "Daniel", number: "056239123", hometown: "Tuusula", picture: (<img src="https://image.laji.fi/MM.133557/iso-orava_Jen_Goellnitz_CC_BY-NC-SA_1_FI.jpg" alt="Logo" height="70px" width="70px" />) },
   { name: "Miska", number: "056239854", hometown: "Helsinki", picture: (<img src="http://www.suomensiiliyhdistys.fi/wp-content/uploads/2012/07/suklaa.jpg" alt="Logo" height="70px" width="70px" />) },
   { name: "Miika", number: "056876123", hometown: "Vantaa", picture: (<img src="https://qph.fs.quoracdn.net/main-qimg-c63bc4aeebeffe10a3697a62176fd978-lq" alt="Logo" height="70px" width="70px" />) },
@@ -196,7 +196,7 @@ const peopleList = [
       <Navbar links={links} modalData={modalData}>
         <ThemeSwitch />
       </Navbar>
-      <Table parentData={peopleList} parentHeaders={tableHeader} />
+      <Table parentData={tableList} parentHeaders={tableHeader} />
       <h1>Header</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
       </p>
@@ -215,19 +215,30 @@ Which would look like this:
 
 `const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar which by pressing, redirect the user to the location which is defined in the `destination` -attribute.
 
+![image](https://user-images.githubusercontent.com/78149945/142477747-d68ab3b9-e95a-458a-b145-4e5b5b36b0ef.png)
+
 ### const modalData
 
-`const modalData` -table takes in objects which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link. The `content` -attribute takes in jsx-code, through which modal-window contents are defined. The user can create new input fields for example.
+`const modalData` -table takes in objects which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link.
+
+![image](https://user-images.githubusercontent.com/78149945/142477887-5f922194-5a41-47c8-b25b-f9b9bfc9a9a1.png)
+
+The `content` -attribute takes in jsx-code, through which modal-window contents are defined. The user can create new input fields for example.
+
+![image](https://user-images.githubusercontent.com/78149945/142477952-be3714ce-9039-4d78-9b6c-a177a81c8d22.png)
 
 
 ### const tableHeader
 
 `const tableHeader` -table takes in objects, which have `header` and `property` -attributes. The `header` attribute is the name of the <th> element which doesn't appear in the code and the `property` -attribute creates the text for each individual object in the table header.
+  
+![image](https://user-images.githubusercontent.com/78149945/142478047-527d514c-8236-4650-8f5b-0e3410d51adb.png)
 
-### const peopleList
+### const tableList
 
-`const peopleList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `peopleList` -attributes. Otherwise the table won't look optimal.
-
+`const tableList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `tableList` -attributes. Otherwise the table won't look optimal.
+  
+![image](https://user-images.githubusercontent.com/78149945/142478387-4d963219-ccce-4446-9dee-1f5112eba9a4.png)
 
 ### Style design 
 
