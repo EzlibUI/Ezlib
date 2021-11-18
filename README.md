@@ -234,8 +234,6 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
   
 ![image](https://user-images.githubusercontent.com/78149945/142480205-fe95f3a3-5ab1-4663-8b6c-0e7e8be66468.png)
   
-  
-![image](https://user-images.githubusercontent.com/78149945/142478047-527d514c-8236-4650-8f5b-0e3410d51adb.png)
 
 ### const tableList
 
