@@ -232,6 +232,9 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 
 `const tableHeader` -table takes in objects, which have `header` and `property` -attributes. The `header` attribute is the name of the <th> element which doesn't appear in the code and the `property` -attribute creates the text for each individual object in the table header.
   
+![image](https://user-images.githubusercontent.com/78149945/142480205-fe95f3a3-5ab1-4663-8b6c-0e7e8be66468.png)
+  
+  
 ![image](https://user-images.githubusercontent.com/78149945/142478047-527d514c-8236-4650-8f5b-0e3410d51adb.png)
 
 ### const tableList
