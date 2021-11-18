@@ -176,6 +176,13 @@ const modalData = [
   }
 ]
 
+const tableHeader = [
+  { header: "Name", property: "name" },
+  { header: "Number", property: "number" },
+  { header: "State", property: "hometown" },
+  { header: "Picture", property: "picture" }
+]
+
 const peopleList = [
   { name: "Daniel", number: "056239123", hometown: "Tuusula", picture: (<img src="https://image.laji.fi/MM.133557/iso-orava_Jen_Goellnitz_CC_BY-NC-SA_1_FI.jpg" alt="Logo" height="70px" width="70px" />) },
   { name: "Miska", number: "056239854", hometown: "Helsinki", picture: (<img src="http://www.suomensiiliyhdistys.fi/wp-content/uploads/2012/07/suklaa.jpg" alt="Logo" height="70px" width="70px" />) },
@@ -184,20 +191,12 @@ const peopleList = [
   { name: "Oliver", number: "056249623", hometown: "Addis Abeba", picture: (<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBbW_5qGdM57K3D1edFkneXfRqw9uzlVsdjA&usqp=CAU" alt="Logo" height="70px" width="70px" />) }
 ]
 
-const headers = [
-  { header: "Name", property: "name" },
-  { header: "Number", property: "number" },
-  { header: "State", property: "hometown" },
-  { header: "Picture", property: "picture" }
-]
-
-
   return (
     <div>
       <Navbar links={links} modalData={modalData}>
         <ThemeSwitch />
       </Navbar>
-      <Table parentData={peopleList} parentHeaders={headers} />
+      <Table parentData={peopleList} parentHeaders={tableHeader} />
       <h1>Header</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
       </p>
@@ -214,16 +213,20 @@ Which would look like this:
 
 ### const links
 
-`const links` -table takes in objects, which have `name`- and `destination` -attributes. These objects create links to the navbar which by pressing, redirect the user to the location which is defined in the `destination` -attribute.
+`const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar which by pressing, redirect the user to the location which is defined in the `destination` -attribute.
 
 ### const modalData
 
 `const modalData` -table takes in objects which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link. The `content` -attribute takes in jsx-code, through which modal-window contents are defined. The user can create new input fields for example.
 
 
+### const tableHeader
+
+`const tableHeader` -table takes in objects, which have `header` and `property` -attributes. The `header` attribute is the name of the <th> element which doesn't appear in the code and the `property` -attribute creates the text for each individual object in the table header.
+
 ### const peopleList
 
-`const links` -table takes in objects, which by default have `name`- and `dest` -attributes.
+`const peopleList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `peopleList` -attributes. Otherwise the table won't look optimal.
 
 
 ### Style design 
