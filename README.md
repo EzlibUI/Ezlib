@@ -157,6 +157,7 @@ function App() {
     </div>
   )
 }
+```
 
 ### Detailed instructions
 
