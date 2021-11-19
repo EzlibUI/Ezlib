@@ -116,13 +116,13 @@ Which would look like this:
 
 ### const links
 
-`const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar which by pressing, redirect the user to the location, which is defined in the `destination` -attribute.
+`const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar, which by pressing, redirect the user to the location, which is defined in the `destination` -attribute.
 
 ![image](https://user-images.githubusercontent.com/78149945/142477747-d68ab3b9-e95a-458a-b145-4e5b5b36b0ef.png)
 
 ### const modalData
 
-`const modalData` -table takes in objects which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar, which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link.
+`const modalData` -table takes in objects, which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar, which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link.
 
 ![image](https://user-images.githubusercontent.com/78149945/142477887-5f922194-5a41-47c8-b25b-f9b9bfc9a9a1.png)
 
