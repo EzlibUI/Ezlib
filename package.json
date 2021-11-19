@@ -43,6 +43,6 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-npm": "^2.0.0",
-    "storybook": "^6.3.8"
+    "storybook": "^6.3.12"
   }
 }
