@@ -39,7 +39,6 @@ export const ThemeSwitch = () => {
       root.style.setProperty('--modal-background-color', "#444444");
       root.style.setProperty('--modal-hover-color', "#414040");
       root.style.setProperty('--modal-text', "white");
-      //root.style.setProperty('--nav-li-color', "#8b8b8b");
       root.style.setProperty('--table-background', "#444444");
       root.style.setProperty('--table-header', "#292929");
       root.style.setProperty('--table-header-color', "white");
