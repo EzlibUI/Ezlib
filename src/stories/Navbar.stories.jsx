@@ -6,8 +6,12 @@ import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ThemeSwitch } from "../components/ThemeSwitch";
 
+/* Navbar stories simuloi käyttäjän ohjelmaa */
+
+// storybookin ominaisuus, joka tuo komponentin esille kehitysvaiheessa.
 const stories = storiesOf("Navbar", module);
 
+//Navigaatiopalkin linkit | name on teksti, joka tulee näkyville, destination on sijainti johon siirrytään kun linkkiä klikataan
 const links = [
   { name: "Home", destination: "/home" },
   { name: "Contact", destination: "/contact" },
@@ -86,7 +90,7 @@ const modalData = [
 //   </div>
 // )
 
-
+// Toimii samalla tavalla kuin komponentin return eli palauttaa näkyville returnissa määriteldyt komponentit.
 stories.add("Navbar", () => {
   return (
     <div>
