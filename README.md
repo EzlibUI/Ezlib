@@ -2,7 +2,7 @@
 
 ## Creators
 
-Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin and Miika Vähänen
+Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin and Miika Vähänen.
 
 ## What is Ezlib-UI?
 
