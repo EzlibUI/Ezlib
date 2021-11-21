@@ -5,16 +5,16 @@ export const Tabledata = ({ headers, content, handleSort }) => {
 
   return (
     <table>
-      <tr> {/*Headerin data */}
+      <tr> {/* Header's data */}
         {headers.map(header => {
           console.log(headers)
           return <th onClick={handleSort} name={header.property}>{header.header}</th>
         })}
       </tr>
-      { // Luodaan jokaiselle datan objektille rivi
+      { // Create a row for each object in the data
         content.map(person => {
           return (<tr>
-            { // luodaan dataelementit objektin jokaiselle ominaisuudelle
+            { // Create dataelement for each object
               Object.keys(person).map((key) => {
                 return (
                   <td>{person[key]}</td>

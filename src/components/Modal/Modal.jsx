@@ -6,6 +6,10 @@ export const Modal = ({ show, toggle, content }) => {
         return null;
     } else {
         return (
+            <div className="background-blur">
+                <div className="modal">
+                    <button onClick={() => toggle()} id="exitModal">X</button>
+                    <div className="modal-container">{content}</div>
             <div className="modal">
                 {/* toggle on funktio, joka vaihtaa modaalin näkyvyyden tilaa. funktion määrittely tällä hetkellä sijaitsee ylemmässä */}
                 <button onClick={() => toggle()} id="exitModal">X</button>
