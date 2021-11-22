@@ -149,3 +149,7 @@ Our styles are done with css and can be found from the `styles.css` file. Ezlib-
 ![image](https://user-images.githubusercontent.com/78149945/142479892-1f42ae1a-2b7c-4565-a1e8-195f0e58f354.png)
 
 ![image](https://user-images.githubusercontent.com/78149945/142479945-60de2964-1822-4fc8-a56b-51e2f4be2e4d.png)
+
+## Licenses
+
+Ezlib-UI is published with the MIT license
