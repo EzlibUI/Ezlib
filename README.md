@@ -1,8 +1,10 @@
 # Ezlib-UI
 
+https://github.com/EzlibUI/Ezlib
+
 ## Creators
 
-Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin and Miika Vähänen.
+[Oliver Hyryläinen](https://github.com/kanaolkku), [Joonas Niskanen](https://github.com/Nekmayne), [Daniel Tarsalainen](https://github.com/DanielTarsalainen), [Miska Vivolin](https://github.com/MiskaVivolin) and [Miika Vähänen](https://github.com/migiis).
 
 ## What is Ezlib-UI?
 
@@ -112,8 +114,6 @@ Which would look like this:
 
 ![image](https://user-images.githubusercontent.com/78149945/142471544-69ec8eae-ac25-49ca-a8a9-549bdfa8e2f0.png)
 
-
-
 ### const links
 
 `const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar, which by pressing, redirect the user to the location, which is defined in the `destination` -attribute.
@@ -130,24 +130,22 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 
 ![image](https://user-images.githubusercontent.com/78149945/142477952-be3714ce-9039-4d78-9b6c-a177a81c8d22.png)
 
-
 ### const tableHeader
 
 `const tableHeader` -table takes in objects, which have `header` and `property` -attributes. The `header` attribute is the name of the <th> element, which doesn't appear in the code. The `property` -attribute creates the text for each individual object in the table header.
-  
+
 ![image](https://user-images.githubusercontent.com/78149945/142480205-fe95f3a3-5ab1-4663-8b6c-0e7e8be66468.png)
-  
 
 ### const tableList
 
 `const tableList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `tableList` -attributes. Otherwise the table won't look optimal.
-  
+
 ![image](https://user-images.githubusercontent.com/78149945/142478387-4d963219-ccce-4446-9dee-1f5112eba9a4.png)
 
-### Style design 
+### Style design
 
 Our styles are done with css and can be found from the `styles.css` file. Ezlib-UI has a built-in dark mode, which can be switched to light mode by pressing the moon symbol. Dark mode can again be activated by pressing the sun symbol.
-  
+
 ![image](https://user-images.githubusercontent.com/78149945/142479892-1f42ae1a-2b7c-4565-a1e8-195f0e58f354.png)
 
 ![image](https://user-images.githubusercontent.com/78149945/142479945-60de2964-1822-4fc8-a56b-51e2f4be2e4d.png)
