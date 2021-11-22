@@ -1,1 +1,7 @@
 node_modules/
+node_modules/.cache/
+node_modules/.cache/storybook
+.vscode
+.storybook
+package-lock.json
+storybook/.expo

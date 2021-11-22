@@ -2,11 +2,11 @@
 
 ## Creators
 
-Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin ja Miika Vähänen
+Oliver Hyryläinen, Joonas Niskanen, Daniel Tarsalainen, Miska Vivolin and Miika Vähänen.
 
 ## What is Ezlib-UI?
 
-A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as a ready-to-use application. Ezlib-UI is a quick and easy mobile-friendly component package which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
+A react library designed for programmers looking for a stylish template for their application, which when provided with raw data, operates as a ready-to-use application. Ezlib-UI is a quick and easy mobile-friendly component package, which is highly customizable for your own taste. In a nutshell, we provide our users a single npm package with multiple components, which is a ready-made react website template containing switchable dark mode style.
 
 ## Get started
 
