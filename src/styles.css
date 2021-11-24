@@ -1,4 +1,5 @@
 :root {
+  --forgot-text: rgb(255, 255, 255);
   --input-background-color: #2e2e2e;
   --input-color: gray;
   --input-focused: #ffffff;
@@ -22,22 +23,24 @@ a:visited {
   color: var(--nav-li-color);
 }
 
-a:link{
+a:link {
   color: var(--nav-li-color);
 }
 
 a {
   text-decoration: none;
-  color: var(--nav-li-color)
+  color: var(--nav-li-color);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 /* .background-blur { 
 background-color: rgba(41, 41, 41, .5);
 }  */
 
-@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+@supports (
+  (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
+) {
   .background-blur {
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
@@ -55,11 +58,11 @@ body {
   color: var(--main-color);
   text-align: center;
   font-family: Verdana, Tahoma, sans-serif;
-  font-family: 'Inter', 'Roboto', sans-serif;
+  font-family: "Inter", "Roboto", sans-serif;
 }
 
 .button {
-  background-image: linear-gradient(180deg, rgb(18, 211, 92), rgb(14, 167, 72) );
+  background-image: linear-gradient(180deg, rgb(18, 211, 92), rgb(14, 167, 72));
   padding: 6px 16px;
   border: none;
   border-radius: 5px;
@@ -70,7 +73,11 @@ body {
 }
 
 .button:hover {
-  background-image: linear-gradient(180deg, rgb(53, 197, 108), rgb(53, 192, 106) );
+  background-image: linear-gradient(
+    180deg,
+    rgb(53, 197, 108),
+    rgb(53, 192, 106)
+  );
 }
 
 #exitModal {
@@ -85,15 +92,15 @@ body {
   cursor: pointer;
 }
 
-.forgotText {
+.forgotText a {
   font-size: 10px;
-  color: rgb(255, 255, 255);
-  margin: 0px 0px 5px 0;
+  color: var(--forgot-text);
+  margin: 0px 0px 5px 0px;
   float: right;
 }
 
 #forgotText:hover {
-  color: rgb(230, 230, 230)
+  color: rgb(230, 230, 230);
 }
 
 /* label {
@@ -103,7 +110,7 @@ body {
 
 .light-mode {
   background-color: rgb(255, 255, 255);
-  color: black; 
+  color: black;
 }
 
 .modal {
@@ -118,7 +125,7 @@ body {
   background-color: var(--modal-background-color);
   color: var(--modal-text);
   font-family: Verdana, Tahoma, sans-serif;
-  font-family: 'Inter', 'Roboto', sans-serif;
+  font-family: "Inter", "Roboto", sans-serif;
   border-radius: 5px;
   box-shadow: 0 0 5px black;
 }
@@ -127,14 +134,14 @@ body {
   cursor: pointer;
   position: absolute;
   background-color: var(--modal-hover-color);
-} 
-  
+}
+
 /* .modal:hover::after {
   transition: 0.5s all ease;
   position: absolute;
   content: "";
 } */
-  
+
 .modal-container {
   padding: 20px;
   margin: 30px;
@@ -154,7 +161,7 @@ body {
   outline: none;
 }
 
-.modal-container input:focus{
+.modal-container input:focus {
   background-color: var(--input-focused);
 }
 .nav-button {
@@ -180,7 +187,7 @@ nav .nav-option {
   color: var(--nav-option-color);
   font-size: 12px;
   font-family: Verdana, Tahoma, sans-serif;
-  font-family: 'Inter', 'Roboto', sans-serif;
+  font-family: "Inter", "Roboto", sans-serif;
   /*background-color: linear-gradient(180deg, rgb(90, 167, 255), rgb(80, 80, 241));*/
   /* background-color: #3B01E1; */
   padding: 16px;
@@ -188,7 +195,7 @@ nav .nav-option {
   padding-right: 5px;
   border-radius: 0px;
   margin-left: 15px;
-  transition: ergb(32, 32, 32);  
+  transition: ergb(32, 32, 32);
 }
 
 .nav-option:hover {
@@ -206,7 +213,6 @@ nav .nav-option {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
 .mobile-nav-button {
   position: absolute;
@@ -246,10 +252,12 @@ color:rgb(146, 157, 255);
 
 .pagination-nav {
   display: flex;
-  justify-content: right
+  justify-content: right;
 }
 
-table, th, td {
+table,
+th,
+td {
   border-collapse: collapse;
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 12px;
@@ -279,8 +287,12 @@ tr:nth-child(odd) {
 }
 */
 
-.tableButton{
-  background-image: linear-gradient(180deg, rgb(129, 129, 129), rgb(116, 116, 116) );
+.tableButton {
+  background-image: linear-gradient(
+    180deg,
+    rgb(129, 129, 129),
+    rgb(116, 116, 116)
+  );
   padding: 6px 10px;
   border: none;
   border-radius: 5px;
@@ -290,8 +302,8 @@ tr:nth-child(odd) {
   margin-top: 5px;
 }
 
-.tableButton-selected{
-  background-image: linear-gradient(180deg, rgb(18, 211, 92), rgb(14, 167, 72) );
+.tableButton-selected {
+  background-image: linear-gradient(180deg, rgb(18, 211, 92), rgb(14, 167, 72));
   padding: 6px 10px;
   border: none;
   border-radius: 5px;
@@ -313,7 +325,7 @@ tr:nth-child(odd) {
   border-radius: 5px;
 }
 
-.tableholder{
+.tableholder {
   background-color: var(--table-background);
   /* overflow-y: auto; */
   margin-left: 10%;
@@ -339,7 +351,7 @@ ul {
   margin-right: 20px;
 }
 
-.page-selected{
+.page-selected {
   background-color: rgb(0, 255, 21);
   font-size: 20px;
   border: 1px rgb(126, 126, 126) solid;
@@ -384,11 +396,10 @@ ul {
     float: right;
     display: block;
   }
-  
+
   .tableholder {
     margin-left: 0px;
     margin-right: 0px;
-    
   }
 
   .mobile-nav-container {

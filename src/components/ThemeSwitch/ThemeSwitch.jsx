@@ -12,6 +12,7 @@ export const ThemeSwitch = () => {
 
     if (colorMode === "dark") {
       //set light mode on
+      root.style.setProperty('--forgot-text', "black");
       root.style.setProperty('--input-background-color', "#ffffff");
       root.style.setProperty('--input-color', "#000000");
       root.style.setProperty('--input-focused', "#EAEAEA");
@@ -30,6 +31,7 @@ export const ThemeSwitch = () => {
 
     } else {
       //set dark mode on
+      root.style.setProperty('--forgot-text', "white");
       root.style.setProperty('--input-background-color', "#303030");
       root.style.setProperty('--input-color', "#DCDBDB");
       root.style.setProperty('--input-focused', "#373737");
@@ -40,9 +42,9 @@ export const ThemeSwitch = () => {
       root.style.setProperty('--modal-hover-color', "#414040");
       root.style.setProperty('--modal-text', "white");
       root.style.setProperty('--table-background', "#444444");
+      root.style.setProperty('--table-color', "white");
       root.style.setProperty('--table-header', "#292929");
       root.style.setProperty('--table-header-color', "white");
-      root.style.setProperty('--table-color', "white");
       
       setColorMode("dark");
     }
