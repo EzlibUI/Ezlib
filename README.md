@@ -12,7 +12,17 @@ A react library designed for programmers looking for a stylish template for thei
 
 ## Get started
 
-This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. Users can import individual components they want to use by typing them into their js. file: `import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';`. There's also a couple icons to be imported: `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it's possible to import only one or two components if need be. Lastly the individual components, which take in props, need to be rendered.
+This command installs the component and any packages that it depends on. 
+
+#### npm 
+`npm install ezlib-ui` or `npm i ezlib-ui`
+
+or
+
+#### yarn
+`yarn add ezlib-ui`
+
+Users can import individual components they want to use by typing them into their js. file: `import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';`. There's also a couple icons to be imported: `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it's possible to import only one or two components if need be. Lastly the individual components, which take in props, need to be rendered.
 
 ## Usage
 
