@@ -12,7 +12,11 @@ stories.add("Button", () => {
 
   return (
     <div>
-      <Button event={sayHello} text={"Button"} />
+      <Button event={sayHello} text="Large" size="large" />
+      <br></br>
+      <Button event={sayHello} text={"Medium"} />
+      <br></br>
+      <Button event={sayHello} text="Small" size="small" />
     </div>
   )
 })

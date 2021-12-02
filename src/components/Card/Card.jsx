@@ -2,18 +2,18 @@ import React from 'react'
 import { useState, useEffect } from "react";
 
 
-export const Card = ({children, image, shortText, text, title, description, button}) => {
+export const Card = ({ image, text, title,  button}) => {
 
     return (
         <div className="card">
         <div className="card-image">
         <img src={image} alt="cardimage"></img>
-        <p>{description}</p>
         </div>
-        <span>{shortText}</span>
-        <h2>{title}</h2>
+        <div className="card-text-container">
+        <h3>{title}</h3>
         <p>{text}</p>
         {button}
+        </div>
         </div>
     )
 }

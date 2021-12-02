@@ -65,13 +65,21 @@ body {
 
 .button {
   background-image: linear-gradient(180deg, rgb(18, 211, 92), rgb(14, 167, 72));
-  padding: 6px 16px;
   border: none;
   border-radius: 5px;
   color: white;
   font-size: 14px;
   cursor: pointer;
   margin-top: 5px;
+}
+.button-small {
+  padding: 3px 9px;
+}
+.button-medium {
+  padding: 6px 16px;
+}
+.button-large {
+  padding: 12px 30px;
 }
 
 .button:hover {
@@ -83,23 +91,45 @@ body {
 }
 
 .card {
-  max-width: 500px;
-  border: solid black 1px;
+  max-width: 300px;
+  border: 1px rgb(34, 34, 34) solid;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 25px 20px;
+  background-color: var(--text-container-color);
+  display: inline-block;
 }
 
 .card-image {
   position: relative;
+  padding: 10px;
 }
 
 .card-image img {
   width: 100%;
+  z-index: 1;
+  border-radius: 10px;
+  border: 1px rgb(34, 34, 34) solid;
+}
+.card-text-container {
+  margin: 10px;
 }
 
-.card-image p {
-  position: relative;
+.card-text-container h3 {
+  text-align: left;
+  margin-top: 5px;
+}
+
+.card-text-container p {
+  text-align: start;
+  font-size: 12px;
+}
+
+.card-image-text {
+  position: absolute;
   left: 50%;
-  top: 90%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  transform: translateX(-50%);
 }
 
 #exitModal {

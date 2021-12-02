@@ -254,13 +254,30 @@ stories.add("Frontpage", () => {
       <Navbar links={links} modalData={modalData}>
         <ThemeSwitch />
       </Navbar>
-      <Card image="https://nypost.com/wp-content/uploads/sites/2/2019/03/chunky-monkey-swns.jpg?quality=80&strip=all" text="Hello" description="Hello" shortText="Hello"/>
       <Table parentData={tableList} parentHeaders={tableHeader} />
       <TextContainer>
       <h1>Header</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
       </p>
       </TextContainer>
+      <Card 
+      image="https://nypost.com/wp-content/uploads/sites/2/2019/03/chunky-monkey-swns.jpg?quality=80&strip=all"
+       text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the" 
+       button={<Button text="Button" size="medium"/>}
+       title="Apina chillaa"
+       />
+       <Card 
+      image="https://nypost.com/wp-content/uploads/sites/2/2019/03/chunky-monkey-swns.jpg?quality=80&strip=all"
+       text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the" 
+       button={<Button text="Button" size="medium"/>}
+       title="Apina chillaa"
+       />
+       <Card 
+      image="https://nypost.com/wp-content/uploads/sites/2/2019/03/chunky-monkey-swns.jpg?quality=80&strip=all"
+       text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the" 
+       button={<Button text="Button" size="medium"/>}
+       title="Apina chillaa"
+       />
     </div>
   )
 })
