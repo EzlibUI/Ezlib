@@ -151,6 +151,10 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 `const tableList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `tableList` -attributes. Otherwise the table won't look optimal.
 
 ![image](https://user-images.githubusercontent.com/78149945/142478387-4d963219-ccce-4446-9dee-1f5112eba9a4.png)
+  
+## Codesandbox try it yourself
+ 
+https://codesandbox.io/s/modest-resonance-j3sjh?file=/src/App.js
 
 ### Style design
 
