@@ -1,21 +1,24 @@
 :root {
+  --forgot-text: rgb(255, 255, 255);
   --input-background-color: #2e2e2e;
   --input-color: gray;
   --input-focused: #ffffff;
   --input-outline: #e40000;
+  --main-color: white;
   --main-background-color: #292929;
   --modal-background-color: #444444;
   --modal-hover-color: rgb(102, 102, 102);
   --modal-text: white;
-  --nav-background-color: #444444;
+  --nav-background-color: #383838;
   --nav-li-color: white;
   --nav-option-color: white;
   --nav-option-hover: #292929;
-  --table-background: #444444;
+  --table-background: #272727;
+  --table-border-bottom: #d4d4d4;
   --table-color: white;
   --table-header: #292929;
   --table-header-color: white;
-  --main-color: white;
+  --text-container-color: #444444;
 }
 
 a:visited {
@@ -79,6 +82,26 @@ body {
   );
 }
 
+.card {
+  max-width: 500px;
+  border: solid black 1px;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-image p {
+  position: relative;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+
 #exitModal {
   position: absolute;
   top: 4%;
@@ -91,10 +114,10 @@ body {
   cursor: pointer;
 }
 
-.forgotText {
+.forgotText a {
   font-size: 10px;
-  color: rgb(255, 255, 255);
-  margin: 0px 0px 5px 0;
+  color: var(--forgot-text);
+  margin: 0px 0px 5px 0px;
   float: right;
 }
 
@@ -111,6 +134,32 @@ body {
   background-color: rgb(255, 255, 255);
   color: black;
 }
+
+.mobile-navigation {
+  background-color: #242424;
+  position: fixed;
+  height: 100vh;
+  width: 50vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mobile-nav-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.mobile-navigation ul {
+  font-size: 35px;
+}
+
+/* .mobile-nav-option li {
+  display: block;
+  margin: 10px;
+}  */
 
 .modal {
   position: absolute;
@@ -163,6 +212,7 @@ body {
 .modal-container input:focus {
   background-color: var(--input-focused);
 }
+
 .nav-button {
   display: none;
 }
@@ -203,21 +253,6 @@ nav .nav-option {
   /* background-color: #3B01E1; */
 }
 
-.mobile-navigation {
-  background-color: #242424;
-  position: fixed;
-  height: 100vh;
-  width: 50vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.mobile-nav-button {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
 .nav-button {
   color: rgb(255, 255, 255);
   border: none;
@@ -227,15 +262,6 @@ nav .nav-option {
   padding: 2px 8px;
   outline: none;
 }
-
-.mobile-navigation ul {
-  font-size: 35px;
-}
-
-/* .mobile-nav-option li {
-  display: block;
-  margin: 10px;
-}  */
 
 .nav_vertical {
   display: block;
@@ -248,6 +274,18 @@ top: 30px;
 color:rgb(146, 157, 255);
 }
 */
+
+.page-selected {
+  background-color: rgb(0, 255, 21);
+  font-size: 20px;
+  border: 1px rgb(126, 126, 126) solid;
+  border-radius: 4px;
+  color: white;
+}
+
+.page-item {
+  margin-left: 10px;
+}
 
 .pagination-nav {
   display: flex;
@@ -313,7 +351,7 @@ tr:nth-child(odd) {
 }
 
 .tableholder tr td {
-  border-bottom: #afafaf 1px solid;
+  border-bottom: var(--table-border-bottom) 1px solid;
   border-radius: 5px;
 }
 
@@ -350,16 +388,12 @@ ul {
   margin-right: 20px;
 }
 
-.page-selected {
-  background-color: rgb(0, 255, 21);
-  font-size: 20px;
-  border: 1px rgb(126, 126, 126) solid;
-  border-radius: 4px;
-  color: white;
-}
-
-.page-item {
-  margin-left: 10px;
+.text-container {
+  margin: 0 10% 0 10%;
+  background-color: var(--text-container-color);
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin-top: 20px;
 }
 
 /* width */
@@ -383,21 +417,16 @@ ul {
 } */
 
 @media only screen and (max-width: 500px) {
+  .mobile-nav-container {
+    display: block;
+  }
+
   .navigation-nav ul {
     margin-left: 0px;
   }
 
   .nav-button {
     float: right;
-    display: block;
-  }
-
-  .tableholder {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  .mobile-nav-container {
     display: block;
   }
 
@@ -409,5 +438,15 @@ ul {
 
   .non-mobile {
     display: none;
+  }
+
+  .tableholder {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .text-container {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

@@ -12,7 +12,17 @@ A react library designed for programmers looking for a stylish template for thei
 
 ## Get started
 
-This command installs the component and any packages that it depends on: `npm install ezlib-ui` or `npm i ezlib-ui`. Users can import individual components they want to use by typing them into their js. file: `import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';`. There's also a couple icons to be imported: `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it's possible to import only one or two components if need be. Lastly the individual components, which take in props, need to be rendered.
+This command installs the component and any packages that it depends on. 
+
+#### npm 
+`npm install ezlib-ui` or `npm i ezlib-ui`
+
+or
+
+#### yarn
+`yarn add ezlib-ui`
+
+Users can import individual components they want to use by typing them into their js. file: `import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';`. There's also a couple icons to be imported: `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it's possible to import only one or two components if need be. Lastly the individual components, which take in props, need to be rendered.
 
 ## Usage
 
@@ -141,6 +151,10 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 `const tableList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `tableList` -attributes. Otherwise the table won't look optimal.
 
 ![image](https://user-images.githubusercontent.com/78149945/142478387-4d963219-ccce-4446-9dee-1f5112eba9a4.png)
+  
+## Codesandbox try it yourself
+ 
+https://codesandbox.io/s/modest-resonance-j3sjh?file=/src/App.js
 
 ### Style design
 

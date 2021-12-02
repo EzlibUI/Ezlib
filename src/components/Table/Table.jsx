@@ -11,9 +11,9 @@ export const Table = ({ parentData, parentHeaders }) => {
   const [sortedData, setSortedData] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(6);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = setCurrentPage;
 
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
