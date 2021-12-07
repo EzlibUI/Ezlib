@@ -1,7 +1,7 @@
 import React from 'react'
 import apiKey from './Apikey'
 
-  export function Maps({width, height, location, zoom}) {
+  export const Maps = ({width, height, location, zoom}) => {
       return (
           <iframe
               width={width}
