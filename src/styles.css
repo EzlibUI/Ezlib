@@ -339,7 +339,9 @@ td {
   margin-top: 15px;
   padding: 12px;
 }
-
+th {
+  cursor: pointer;
+}
 td {
   width: 100px;
   text-align: center;
