@@ -1,4 +1,5 @@
 import React from 'react'
+import { apiKey } from './Apikey'
 
   export function Maps({width, height, location, zoom}) {
       return (
@@ -7,7 +8,7 @@ import React from 'react'
               height={height}
               loading="lazy"
               allowfullscreen
-              src={'https://www.google.com/maps/embed/v1/place?q=' + location + '&key=AIzaSyD6JR9xjw9xjtPRBMokIBM1eJ5LNUHRXIQ&zoom=' + zoom}
+              src={'https://www.google.com/maps/embed/v1/place?q=' + location + '&key=' + apiKey + '&zoom=' + zoom}
         ></iframe>
       )
   }
