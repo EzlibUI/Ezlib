@@ -124,13 +124,15 @@ Which would look like this:
 
 ![image](https://user-images.githubusercontent.com/78149945/142471544-69ec8eae-ac25-49ca-a8a9-549bdfa8e2f0.png)
 
-### const links
+### Navbar
+#### const links
 
 `const links` -table takes in objects, which have `name` and `destination` -attributes. These objects create links to the navbar, which by pressing, redirect the user to the location, which is defined in the `destination` -attribute.
 
 ![image](https://user-images.githubusercontent.com/78149945/142477747-d68ab3b9-e95a-458a-b145-4e5b5b36b0ef.png)
 
-### const modalData
+### Modal
+#### const modalData
 
 `const modalData` -table takes in objects, which have `text`, `icon` and `content` -attributes. each object in modalData acts as a separate independent modal window. The `text` -attribute creates a link to the navbar, which by pressing, open the modal window. The `icon` -attribute creates a neat icon for the modal link.
 
@@ -140,18 +142,80 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 
 ![image](https://user-images.githubusercontent.com/78149945/142477952-be3714ce-9039-4d78-9b6c-a177a81c8d22.png)
 
-### const tableHeader
+### Table component
+
+#### const tableHeader
 
 `const tableHeader` -table takes in objects, which have `header` and `property` -attributes. The `header` attribute is the name of the <th> element, which doesn't appear in the code. The `property` -attribute creates the text for each individual object in the table header.
 
 ![image](https://user-images.githubusercontent.com/78149945/142480205-fe95f3a3-5ab1-4663-8b6c-0e7e8be66468.png)
 
-### const tableList
+#### const tableList
 
 `const tableList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `tableList` -attributes. Otherwise the table won't look optimal.
 
 ![image](https://user-images.githubusercontent.com/78149945/142478387-4d963219-ccce-4446-9dee-1f5112eba9a4.png)
   
+#### Table prop rowAmount
+
+The rowAmount prop in the table component receives a number that determines the amount of rows shown in a single table page.
+
+### Card
+Card component receives four props: `image, text, title, button`. Each prop is optional.
+  - image receives a URL link of an image
+  - text receives text that will be used in the description of the card
+  - title receives a string that will be used as the title of the card
+  - button receives a jsx component of the users choice. Usually a button or an `<a>` tag with a link.
+  
+  example: 
+  ```
+  <Card 
+      image="https://cdn.discordapp.com/attachments/764051613810950183/917766866687131658/unknown.png"
+       text="A freshly baked pizza with tasty toppings" 
+       button={<Button text="Learn more" size="medium"/>}
+       title="Stone oven pizza"
+  />
+  ```
+  
+  result:
+  
+  ![image](https://user-images.githubusercontent.com/47157255/145043002-8d798d68-2d47-4330-9f31-909c1f4619f0.png)
+
+  
+### TextContainer
+TextContainer is a container for text elements. The purpose of this component is to display text in a way that it matches with the theme.
+example:
+```
+ <TextContainer>
+      <h1>Header</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+</TextContainer>  
+```
+  result: 
+  ![image](https://user-images.githubusercontent.com/47157255/145046278-3209df08-cbdc-48a4-9a99-a1f745368a48.png)
+
+  
+### Maps
+The Maps component displays a Google Maps location of the user's choice. The user can adjust the width, height, location and zoom level with the appropriate props.
+- width prop determines the width of the map.
+- height prop determines the height of the map.
+- location prop determines the location in the map.
+- zoom level determines how closely zoomed the map is.
+
+example:
+  ```
+  <Maps 
+     width={"100%"} 
+     height={400} 
+     location={Hermannin rantatie}
+     zoom={16}
+   />
+  ```
+  result: 
+  
+  ![image](https://user-images.githubusercontent.com/47157255/145045988-fc13bd9a-bbf5-4e18-8674-77e79cfb497a.png)
+
 ## Codesandbox try it yourself
  
 https://codesandbox.io/s/modest-resonance-j3sjh?file=/src/App.js
