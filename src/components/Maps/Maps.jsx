@@ -1,5 +1,5 @@
 import React from 'react'
-import { apiKey } from './Apikey'
+import apiKey from './Apikey'
 
   export function Maps({width, height, location, zoom}) {
       return (
