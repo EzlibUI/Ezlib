@@ -66,7 +66,7 @@ const modalData = [
   }
 ]
 
-const tableHeader = [
+const tableHeaders = [
   { header: "Name", property: "name" },
   { header: "Number", property: "number" },
   { header: "State", property: "hometown" },
@@ -254,10 +254,10 @@ stories.add("Frontpage", () => {
 
   return (
     <div>
-      <Navbar links={links} modalData={modalData}>
+       <Navbar links={links} modalData={modalData}>
         <ThemeSwitch />
       </Navbar>
-      <Table parentData={tableList} parentHeaders={tableHeader} />
+      <Table tableList={tableList} tableHeaders={tableHeaders} rowAmount={10} />
       <TextContainer>
       <h1>Header</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -270,10 +270,10 @@ stories.add("Frontpage", () => {
        title="Apina chillaa"
        />
        <Card 
-      image="https://nypost.com/wp-content/uploads/sites/2/2019/03/chunky-monkey-swns.jpg?quality=80&strip=all"
-       text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the" 
-       button={<Button text="Button" size="medium"/>}
-       title="Apina chillaa"
+      image="https://cdn.discordapp.com/attachments/764051613810950183/917766866687131658/unknown.png"
+       text="A freshly baked pizza with tasty toppings" 
+       button={<Button text="Learn more" size="medium"/>}
+       title="Stone oven pizza"
        />
        <Card 
       image="https://nypost.com/wp-content/uploads/sites/2/2019/03/chunky-monkey-swns.jpg?quality=80&strip=all"

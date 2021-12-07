@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Pagination from "../Pagination/Pagination";
 import { Tabledata } from "../Tabledata/Tabledata";
 
-export const Table = ({ parentData, parentHeaders }) => {
+export const Table = ({ tableList, tableHeaders, rowAmount }) => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [filter, setFilter] = useState("");
@@ -11,7 +11,7 @@ export const Table = ({ parentData, parentHeaders }) => {
   const [sortedData, setSortedData] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [rowsPerPage, setRowsPerPage] = useState(6);
+  const [rowsPerPage, setRowsPerPage] = useState(rowAmount);
 
   const paginate = setCurrentPage;
 
@@ -20,10 +20,10 @@ export const Table = ({ parentData, parentHeaders }) => {
   const currentPages = filteredData.slice(indexOfFirstRow, indexOfLastRow);
 
   useEffect(() => {
-    setData(parentData);
-    setFilteredData(parentData);
-    setSortedData(parentData);
-    setSortBy(parentHeaders[0].property);
+    setData(tableList);
+    setFilteredData(tableList);
+    setSortedData(tableList);
+    setSortBy(tableHeaders[0].property);
   }, []);
 
   const handleFilter = (e) => {
@@ -53,7 +53,7 @@ export const Table = ({ parentData, parentHeaders }) => {
     setSortedData(sortedlist);
     setFilteredData(sortedlist);
   };
-  console.log(parentHeaders);
+  console.log(tableHeaders);
 
   return (
     <div className="tableholder">
@@ -67,7 +67,7 @@ export const Table = ({ parentData, parentHeaders }) => {
           className="table-input-style"
         ></input>
         <Tabledata
-          headers={parentHeaders}
+          headers={tableHeaders}
           content={currentPages}
           handleSort={handleSort}
         />

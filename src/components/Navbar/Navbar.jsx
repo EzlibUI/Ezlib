@@ -47,8 +47,7 @@ export const Navbar = ({ links, modalData, children }) => {
             <ul>
             {/* children contains child elements of the component - in this case a themeswitchbutton*/}
               {children}
-              {modalData 
-                ? modalData.map((modalObject, index) => {
+              {modalData ? modalData.map((modalObject, index) => {
                     return (
                       <div className="nav-modalButtons">
                         <a
