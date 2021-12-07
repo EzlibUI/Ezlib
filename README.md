@@ -22,7 +22,7 @@ or
 #### yarn
 `yarn add ezlib-ui`
 
-Users can import individual components they want to use by typing them into their js. file: `import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';`. There's also a couple icons to be imported: `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it's possible to import only one or two components if need be. Lastly the individual components, which take in props, need to be rendered.
+Users can import individual components they want to use by typing them into their js. file: `import { Table, Button, Navbar, ThemeSwitch, Card, TextContainer, Maps } from 'ezlib-ui';`. There's also a couple icons to be imported: `import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";` and `import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";`. The components are independent of each other so it's possible to import only one or two components if need be. Lastly the individual components, which take in props, need to be rendered.
 
 ## Usage
 
@@ -31,10 +31,9 @@ The program can be created as follows:
 
 ```
 import React from "react";
-import { Table, Button, Navbar, ThemeSwitch } from 'ezlib-ui';
+import { Table, Button, Navbar, ThemeSwitch, Card, TextContainer, Maps } from 'ezlib-ui';
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 export default function App() {
 
@@ -42,17 +41,17 @@ const links = [
   { name: "Home", destination: "/home" },
   { name: "Contact", destination: "/contact" },
   { name: "About", destination: "/about" },
-  { name: "Pictures", destination: "/pictures" }
+  { name: "Menu", destination: "/menu" }
 ]
-
+  
 const modalData = [
   {
     text: "Log in",
     icon: <FontAwesomeIcon icon={faSignInAlt} />,
     content: (
       <div>
-        <h1> Log in
-        </h1>
+        <h1> Log in </h1>
+
         <form id="login-form">
           <input type="text" placeholder="Email" />
           <br />
@@ -66,6 +65,7 @@ const modalData = [
       </div>
     )
   },
+
   {
     text: "Sign up",
     content: (
@@ -91,19 +91,19 @@ const modalData = [
   }
 ]
 
-const tableHeader = [
+const tableHeaders = [
   { header: "Name", property: "name" },
   { header: "Number", property: "number" },
-  { header: "State", property: "hometown" },
+  { header: "Hometown", property: "hometown" },
   { header: "Picture", property: "picture" }
 ]
 
 const tableList = [
-  { name: "Daniel", number: "056239123", hometown: "Tuusula", picture: (<img src="https://image.laji.fi/MM.133557/iso-orava_Jen_Goellnitz_CC_BY-NC-SA_1_FI.jpg" alt="Logo" height="70px" width="70px" />) },
-  { name: "Miska", number: "056239854", hometown: "Helsinki", picture: (<img src="http://www.suomensiiliyhdistys.fi/wp-content/uploads/2012/07/suklaa.jpg" alt="Logo" height="70px" width="70px" />) },
-  { name: "Miika", number: "056876123", hometown: "Vantaa", picture: (<img src="https://qph.fs.quoracdn.net/main-qimg-c63bc4aeebeffe10a3697a62176fd978-lq" alt="Logo" height="70px" width="70px" />) },
-  { name: "Joonas", number: "056239763", hometown: "Korvatunturi", picture: (<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiFkS-c5cwEDQE-ynNBqjsKeAx_mnHgURpHFNFAkee7L3pMQDMavq4el2U7ddfKLrXvA&usqp=CAU" alt="Logo" height="70px" width="70px" />) },
-  { name: "Oliver", number: "056249623", hometown: "Addis Abeba", picture: (<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBbW_5qGdM57K3D1edFkneXfRqw9uzlVsdjA&usqp=CAU" alt="Logo" height="70px" width="70px" />) }
+  { name: "Daniel", number: "0562391232", hometown: "Las Vegas", picture: (<img src="https://image.laji.fi/MM.133557/iso-orava_Jen_Goellnitz_CC_BY-NC-SA_1_FI.jpg" alt="Logo" height="70px" width="70px" />) },
+  { name: "Miska", number: "0562398542", hometown: "Houston", picture: (<img src="http://www.suomensiiliyhdistys.fi/wp-content/uploads/2012/07/suklaa.jpg" alt="Logo" height="70px" width="70px" />) },
+  { name: "Miika", number: "0568761232", hometown: "San Antonio", picture: (<img src="https://qph.fs.quoracdn.net/main-qimg-c63bc4aeebeffe10a3697a62176fd978-lq" alt="Logo" height="70px" width="70px" />) },
+  { name: "Joonas", number: "0562397632", hometown: "Chicago", picture: (<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiFkS-c5cwEDQE-ynNBqjsKeAx_mnHgURpHFNFAkee7L3pMQDMavq4el2U7ddfKLrXvA&usqp=CAU" alt="Logo" height="70px" width="70px" />) },
+  { name: "Oliver", number: "0562496232", hometown: "Dallas", picture: (<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBbW_5qGdM57K3D1edFkneXfRqw9uzlVsdjA&usqp=CAU" alt="Logo" height="70px" width="70px" />) }
 ]
 
   return (
@@ -111,18 +111,45 @@ const tableList = [
       <Navbar links={links} modalData={modalData}>
         <ThemeSwitch />
       </Navbar>
-      <Table parentData={tableList} parentHeaders={tableHeader} />
-      <h1>Header</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
+      <Table tableList={tableList} tableHeaders={tableHeaders} rowAmount={3} />
+      <TextContainer>
+        <h1>Delicious Pizza</h1>
+        <p>
+          Modern pizza evolved from similar flatbread dishes in Naples, Italy, in the 18th or early 19th century. Prior to that time, flatbread was often topped with ingredients such as garlic, salt, lard, and cheese. It is uncertain when tomatoes were first added and there are many conflicting claims. Until about 1830, pizza was sold from open-air stands and out of pizza bakeries.
+        </p>
+        <p>
+          Source: https://en.wikipedia.org/wiki/Pizza
+        </p>
+      </TextContainer>
+      <Card 
+        image="https://cdn.discordapp.com/attachments/764051613810950183/917766866687131658/unknown.png"
+        text="A freshly baked pizza with tasty toppings" 
+        button={<Button text="Learn more" size="medium"/>}
+        title="Stone oven pizza"
+      />
+      <Card 
+        image="https://cdn.discordapp.com/attachments/764051613810950183/917795586932101130/unknown.png"
+        text="A freshly baked pizza with tasty toppings"  
+        button={<Button text="Learn more" size="medium"/>}
+        title="Roman style pizza"
+      />
+      <Card 
+        image="https://cdn.discordapp.com/attachments/764051613810950183/917791748523180032/unknown.png"
+        text="A freshly baked pizza with tasty toppings" 
+        button={<Button text="Learn more" size="medium"/>}
+        title="Jones' pizza"
+      />
+      <Maps width={"100%"} height={"400"} location={"New York"} zoom={"15"} />
     </div>
-  )
+  );
 }
 ```
 
 Which would look like this:
 
-![image](https://user-images.githubusercontent.com/78149945/142471544-69ec8eae-ac25-49ca-a8a9-549bdfa8e2f0.png)
+<img width="1440" alt="Screenshot 2021-12-07 at 17 27 02" src="https://user-images.githubusercontent.com/72009857/145057891-558b4ee8-3a2b-405b-b2b3-e05572366bd0.png">
+
+<img width="1440" alt="Screenshot 2021-12-07 at 17 29 32" src="https://user-images.githubusercontent.com/72009857/145058096-e656d407-13a1-4518-8247-c21cf4859ba9.png">
 
 ### Navbar
 #### const links
@@ -153,12 +180,19 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 #### const tableList
 
 `const tableList` -table takes in objects, which by default have `name`, `number`, `hometown` and `picture` -attributes. These objects will appear as rows in the table component. There's no limit to objects here and there's a built in pagination functionality in the component. User's can create more attributes for the objects, but it's recommended to increase the number of header objects, so that there are as many `const header` -objects as there are const `tableList` -attributes. Otherwise the table won't look optimal.
-
-![image](https://user-images.githubusercontent.com/78149945/142478387-4d963219-ccce-4446-9dee-1f5112eba9a4.png)
   
 #### Table prop rowAmount
 
 The rowAmount prop in the table component receives a number that determines the amount of rows shown in a single table page.
+  
+  Example:
+  ```
+  <Table tableList={tableList} tableHeaders={tableHeaders} rowAmount={3} />
+  ```
+  Result:
+  
+  <img width="1440" alt="Screenshot 2021-12-07 at 17 45 32" src="https://user-images.githubusercontent.com/72009857/145060800-175bd397-6db3-462d-ae6a-c2734cffb35f.png">
+
 
 ### Card
 Card component receives four props: `image, text, title, button`. Each prop is optional.
@@ -167,7 +201,7 @@ Card component receives four props: `image, text, title, button`. Each prop is o
   - title receives a string that will be used as the title of the card
   - button receives a jsx component of the users choice. Usually a button or an `<a>` tag with a link.
   
-  example: 
+  Example: 
   ```
   <Card 
       image="https://cdn.discordapp.com/attachments/764051613810950183/917766866687131658/unknown.png"
@@ -177,14 +211,15 @@ Card component receives four props: `image, text, title, button`. Each prop is o
   />
   ```
   
-  result:
+  Result:
   
   ![image](https://user-images.githubusercontent.com/47157255/145043002-8d798d68-2d47-4330-9f31-909c1f4619f0.png)
 
   
 ### TextContainer
 TextContainer is a container for text elements. The purpose of this component is to display text in a way that it matches with the theme.
-example:
+
+  Example:
 ```
  <TextContainer>
       <h1>Header</h1>
@@ -192,7 +227,8 @@ example:
       </p>
 </TextContainer>  
 ```
-  result: 
+  Result:
+  
   ![image](https://user-images.githubusercontent.com/47157255/145046278-3209df08-cbdc-48a4-9a99-a1f745368a48.png)
 
   
@@ -203,7 +239,7 @@ The Maps component displays a Google Maps location of the user's choice. The use
 - location prop determines the location in the map.
 - zoom level determines how closely zoomed the map is.
 
-example:
+Example:
   ```
   <Maps 
      width={"100%"} 
@@ -212,7 +248,7 @@ example:
      zoom={16}
    />
   ```
-  result: 
+  Result: 
   
   ![image](https://user-images.githubusercontent.com/47157255/145045988-fc13bd9a-bbf5-4e18-8674-77e79cfb497a.png)
 
