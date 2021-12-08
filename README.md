@@ -169,6 +169,23 @@ The `content` -attribute takes in jsx-code, through which modal-window contents 
 
 ![image](https://user-images.githubusercontent.com/78149945/142477952-be3714ce-9039-4d78-9b6c-a177a81c8d22.png)
 
+### ThemeSwitch
+
+Our styles are done with css and can be found from the `styles.css` file. Ezlib-UI has a built-in dark mode, which can be switched to light mode by pressing the moon symbol. Dark mode can again be activated by pressing the sun symbol.
+  
+Example:
+  ```
+  <Navbar>
+    <ThemeSwitch />
+  </Navbar>
+  ```
+  
+Result:
+
+![image](https://user-images.githubusercontent.com/78149945/142479892-1f42ae1a-2b7c-4565-a1e8-195f0e58f354.png)
+
+![image](https://user-images.githubusercontent.com/78149945/142479945-60de2964-1822-4fc8-a56b-51e2f4be2e4d.png)
+
 ### Table component
 
 #### const tableHeader
@@ -252,23 +269,6 @@ Example:
   
   ![image](https://user-images.githubusercontent.com/47157255/145045988-fc13bd9a-bbf5-4e18-8674-77e79cfb497a.png)
   
-### ThemeSwitch
-
-Our styles are done with css and can be found from the `styles.css` file. Ezlib-UI has a built-in dark mode, which can be switched to light mode by pressing the moon symbol. Dark mode can again be activated by pressing the sun symbol.
-  
-Example:
-  ```
-  <Navbar>
-    <ThemeSwitch />
-  </Navbar>
-  ```
-  
-Result:
-
-![image](https://user-images.githubusercontent.com/78149945/142479892-1f42ae1a-2b7c-4565-a1e8-195f0e58f354.png)
-
-![image](https://user-images.githubusercontent.com/78149945/142479945-60de2964-1822-4fc8-a56b-51e2f4be2e4d.png)
-
 ## Codesandbox try it yourself
  
 https://codesandbox.io/s/sad-hofstadter-0ipq9?file=/src/App.js
