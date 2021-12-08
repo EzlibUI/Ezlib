@@ -254,8 +254,8 @@ Example:
 
 ## Codesandbox try it yourself
  
-https://codesandbox.io/s/modest-resonance-j3sjh?file=/src/App.js
-
+https://codesandbox.io/s/sad-hofstadter-0ipq9?file=/src/App.js
+  
 ### Style design
 
 Our styles are done with css and can be found from the `styles.css` file. Ezlib-UI has a built-in dark mode, which can be switched to light mode by pressing the moon symbol. Dark mode can again be activated by pressing the sun symbol.
